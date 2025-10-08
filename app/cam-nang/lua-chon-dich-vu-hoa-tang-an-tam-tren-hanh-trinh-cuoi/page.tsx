@@ -1,9 +1,9 @@
 // app/cam-nang/lua-chon-dich-vu-hoa-tang-an-tam-tren-hanh-trinh-cuoi/page.tsx
 
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import FaqSection from '@/components/FAQ';
 import Image from 'next/image';
 import Link from 'next/link';
-import FaqSection from '@/components/FAQs/FAQs';
 export default async function Page() {
   const slug = 'lua-chon-dich-vu-hoa-tang-an-tam-tren-hanh-trinh-cuoi';
   const title = 'Lựa chọn dịch vụ hỏa táng an tâm trên hành trình cuối';

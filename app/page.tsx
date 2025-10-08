@@ -1,103 +1,125 @@
-import Image from "next/image";
+import { Metadata } from 'next';
 
-export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+import { Article } from '@/schema/article.schema';
+import PostCardWithDescription from '@/components/PostCardWithDescription';
+import PostSlider from '@/components/PostSlider/PostSlider';
+import SimpleSlider from '@/components/SimpleSlider';
+import articles from '@/data/cam-nang.json';
+import { CardVariant } from '@/enums/CardVariant';
+import PostCard from '@/components/PostCard';
+export const metadata: Metadata = {
+  title: 'Cẩm Nang Tang Lễ | Kiến Thức & Hướng Dẫn Khi Nhà Có Đám Tang | Trại Hòm Sinh Phúc Thọ',
+  description:
+    'Tổng hợp các bài viết cẩm nang chi tiết về thủ tục, nghi thức và kinh nghiệm khi nhà có tang. Hướng dẫn tổ chức tang lễ chu đáo, đúng phong tục Việt Nam từ Trại Hòm Sinh Phúc Thọ Gò Vấp.',
+  keywords:
+    'cẩm nang tang lễ, thủ tục tang lễ, kinh nghiệm tổ chức tang lễ, hướng dẫn khi nhà có tang, nghi thức tang lễ, mai táng trọn gói, Trại Hòm Sinh Phúc Thọ',
+  openGraph: {
+    title: 'Cẩm Nang Tang Lễ | Trại Hòm Sinh Phúc Thọ Gò Vấp',
+    description:
+      'Trại Hòm Sinh Phúc Thọ chia sẻ cẩm nang tang lễ đầy đủ, từ thủ tục pháp lý, nghi thức tôn giáo đến các kinh nghiệm tổ chức tang lễ chu đáo và tiết kiệm.',
+    url: 'https://sinhphuctho.com/cam-nang.html',
+    type: 'website',
+    images: [
+      {
+        url: '/assets/images/cam-nang/cam-nang-banner.webp',
+        width: 1600,
+        height: 1030,
+        alt: 'Cẩm nang tang lễ từ Trại Hòm Sinh Phúc Thọ',
+        type: 'image/webp',
+      },
+    ],
+    locale: 'vi_VN',
+    siteName: 'Trại Hòm Sinh Phúc Thọ',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cẩm Nang Tang Lễ | Trại Hòm Sinh Phúc Thọ',
+    description:
+      'Kiến thức và hướng dẫn chi tiết khi nhà có tang từ Trại Hòm Sinh Phúc Thọ. Tang lễ chu đáo, đúng phong tục, trọn gói tại TP.HCM.',
+    images: ['/assets/images/cam-nang/cam-nang-banner.webp'],
+  },
+};
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+export default async function Page() {
+  const centerPost = articles?.[0];
+
+  const leftPosts = articles?.slice(1, 8);
+
+  const rightPosts = articles?.slice(8, 10);
+  const slidePosts = articles?.slice(10, 15);
+
+  const remainPosts = articles?.slice(14, articles.length);
+  const renderPosts = (posts: Article[], variant?: CardVariant) =>
+    posts?.map((article: Article, index) => {
+      const key = index; // Generate a unique key for each item
+      return (
+        <div className="mb-4" key={key}>
+          <PostCard
+            variant={variant}
+            url={article.slug}
+            content={article.content}
+            title={article.title}
+            date={article.createdAt}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      );
+    });
+  return (
+    <>
+      <SimpleSlider />
+      <div className="container px-4 py-12 mx-auto">
+        <h1 className="text-3xl font-bold text-gray-800 mb-4 text-center md:text-left mt-6">
+          Cẩm Nang Tang Lễ
+        </h1>
+        <p className="text-lg leading-relaxed mb-6">
+          <strong>
+            Hướng dẫn chi tiết từng bước để chuẩn bị và tổ chức lễ tang chu đáo, trang nghiêm
+          </strong>
+          .<br /> Trong những thời khắc mất mát, việc chuẩn bị cho một lễ tang không chỉ là trách
+          nhiệm mà còn là cách để thể hiện lòng thành kính, tri ân người đã khuất. Cẩm nang tang lễ
+          cung cấp thông tin thiết thực về các thủ tục, nghi lễ, giấy tờ pháp lý, phong tục tập quán
+          theo vùng miền, cũng như những điều cần lưu ý khi tổ chức tang lễ. Chúng tôi mong muốn
+          giúp gia đình vượt qua giai đoạn khó khăn này một cách nhẹ nhàng và trang trọng nhất.
+        </p>{' '}
+        <div className="grid grid-cols-12 gap-4 lg:border-b md:pb-4">
+          <div className="order-3 lg:order-1 hidden lg:block lg:col-span-3">
+            {renderPosts(leftPosts ?? [])}
+          </div>
+          <div className="order-1 md:order-2 mb-4 md:mb-0 col-span-12 md:col-span-8 lg:col-span-6 md:px-6 md:border-l md:border-r">
+            <PostCard
+              variant={CardVariant.Center}
+              key={999}
+              url={`${centerPost?.slug}`}
+              title={centerPost?.title || ''}
+              content={centerPost?.content || ''}
+            />
+          </div>
+          <div className="col-span-12 order-2 md:col-span-4 lg:col-span-3">
+            {renderPosts(rightPosts ?? [], CardVariant.Right)}
+          </div>
+        </div>
+        <div className="md:mt-8">
+          <PostSlider articles={slidePosts} />
+        </div>
+        <div className="mt-8">
+          <h2 className="uppercase text-3xl">Tin mới</h2>
+          <div className="border-2 border-red-700 w-12 mt-2 mb-6" />
+          <div className="grid lg:grid-cols-3">
+            <div className="lg:col-span-2">
+              {remainPosts.map((article: Article) => (
+                <div className="mb-6" key={article.slug}>
+                  <PostCardWithDescription
+                    title={article.title}
+                    url={article.slug}
+                    content={article.content}
+                    date={article.createdAt}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

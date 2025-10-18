@@ -1,7 +1,7 @@
 // app/cam-nang/phong-tuc-tet-nguyen-dan/page.tsx
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from '@/components/CustomImage';
 import type { Metadata } from 'next';
 
 // ✅ SEO metadata

@@ -1,5 +1,5 @@
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
-import Image from 'next/image';
+import Image from '@/components/CustomImage';
 
 export default function Page() {
   const slug = 'tiet-thanh-minh-la-gi';

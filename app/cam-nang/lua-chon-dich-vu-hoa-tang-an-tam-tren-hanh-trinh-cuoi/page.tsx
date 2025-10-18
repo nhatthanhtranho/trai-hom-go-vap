@@ -2,7 +2,7 @@
 
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import FaqSection from '@/components/FAQ';
-import Image from 'next/image';
+import Image from '@/components/CustomImage';
 import Link from 'next/link';
 export default async function Page() {
   const slug = 'lua-chon-dich-vu-hoa-tang-an-tam-tren-hanh-trinh-cuoi';

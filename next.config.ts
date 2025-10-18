@@ -1,7 +1,13 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // bắt buộc để xuất static HTML
-  trailingSlash: true, // tốt cho GitHub Pages
+  output: 'export',
+  basePath: '/trai-hom-go-vap',
+  assetPrefix: '/trai-hom-go-vap',
+  images: {
+    unoptimized: true,
+  },
+  experimental: {
+    optimizeCss: true, // giúp CSS được inlined đúng
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

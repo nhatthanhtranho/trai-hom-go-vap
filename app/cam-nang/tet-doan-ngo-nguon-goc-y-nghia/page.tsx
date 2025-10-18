@@ -1,6 +1,6 @@
 // app/cam-nang/tet-doan-ngo-y-nghia-phong-tuc-mon-an-truyen-thong/page.tsx
 
-import Image from 'next/image';
+import Image from '@/components/CustomImage';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import { Metadata } from 'next/types';
 

@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import Image from '@/components/CustomImage';
 import { useRouter } from 'next/navigation';
 import { formatLink } from '@/utils/formatLink';
 import { CardVariant } from '@/enums/CardVariant';

@@ -1,6 +1,6 @@
 'use client';
 import { formatLink } from '@/utils/formatLink';
-import Image from 'next/image';
+import Image from '@/components/CustomImage';
 import { useRouter } from 'next/navigation';
 
 export interface PropTypes {

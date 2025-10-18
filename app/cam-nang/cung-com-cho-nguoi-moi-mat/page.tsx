@@ -1,5 +1,5 @@
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
-import Image from 'next/image';
+import Image from '@/components/CustomImage';
 import type { Metadata } from 'next';
 
 const slug = 'cung-com-cho-nguoi-moi-mat';

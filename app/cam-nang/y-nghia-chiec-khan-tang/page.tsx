@@ -2,7 +2,7 @@
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
 import { Metadata } from 'next/types';
-import Image from 'next/image';
+import Image from '@/components/CustomImage';
 
 const slug = 'y-nghia-chiec-khan-tang';
 const title = 'Ý Nghĩa Chiếc Khăn Tang Trong Phong Tục Tang Lễ Việt Nam';

@@ -1,5 +1,5 @@
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
-import Image from 'next/image';
+import Image from '@/components/CustomImage';
 import { Metadata } from 'next/types';
 
 export async function generateMetadata(): Promise<Metadata> {

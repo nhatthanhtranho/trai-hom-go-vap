@@ -1,5 +1,5 @@
 // app/cam-nang/mam-com-cung-gio/page.tsx
-import Image from 'next/image';
+import Image from '@/components/CustomImage';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
 import { Metadata } from 'next/types';

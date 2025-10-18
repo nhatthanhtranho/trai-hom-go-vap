@@ -1,6 +1,6 @@
 // app/cam-nang/[slug]/page.tsx
 
-import Image from 'next/image';
+import Image from '@/components/CustomImage';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import { Metadata } from 'next/types';
 

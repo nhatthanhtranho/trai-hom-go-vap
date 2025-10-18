@@ -1,9 +1,9 @@
-/* eslint-disable react/no-unescaped-entities */
 // app/cam-nang/[slug]/page.tsx
 
 import Image from 'next/image';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import { Metadata } from 'next/types';
+import { formatLink } from '@/utils/formatLink';
 
 const slug = 'cach-viet-dieu-van-tang-le-ngan-gon-xuc-dong';
 const title = 'Cách viết điếu văn tang lễ ngắn gọn và xúc động';
@@ -121,7 +121,7 @@ export default function Article() {
       <figure>
         <Image
           fill
-          src={`/assets/images/cam-nang/${slug}/hinh-1.webp`}
+          src={formatLink(`/assets/images/cam-nang/${slug}/hinh-1.webp`)}
           alt="Viết điếu văn tang lễ - hình minh họa 1"
           priority
         />
@@ -161,7 +161,7 @@ export default function Article() {
       <figure>
         <Image
           fill
-          src={`/assets/images/cam-nang/${slug}/hinh-2.webp`}
+          src={formatLink(`/assets/images/cam-nang/${slug}/hinh-2.webp`)}
           alt="Viết điếu văn tang lễ - hình minh họa 2"
           priority
         />
@@ -211,7 +211,7 @@ export default function Article() {
       <figure>
         <Image
           fill
-          src={`/assets/images/cam-nang/${slug}/hinh-5.webp`}
+          src={formatLink(`/assets/images/cam-nang/${slug}/hinh-5.webp`)}
           alt="Viết điếu văn tang lễ - hình minh họa 5"
           priority
         />

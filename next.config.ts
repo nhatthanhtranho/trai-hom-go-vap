@@ -1,13 +1,13 @@
+/** @type {import('next').NextConfig} */
+const isProd = process.env.NEXT_PUBLIC_ENV === "PRODUCTION";
+
 const nextConfig = {
-  output: 'export',
-  basePath: '/trai-hom-go-vap',
-  assetPrefix: '/trai-hom-go-vap',
+  output: "export",
   images: {
     unoptimized: true,
   },
-  experimental: {
-    optimizeCss: true, // giúp CSS được inlined đúng
-  },
+  basePath: isProd ? "/trai-hom-go-vap" : "",
+  assetPrefix: isProd ? "/trai-hom-go-vap/" : "",
 };
 
-module.exports = nextConfig;
+export default nextConfig;

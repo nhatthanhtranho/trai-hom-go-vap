@@ -2,13 +2,13 @@
   "name": "my-next-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "homepage": "https://nhatthanhtranho.github.io/trai-hom-go-vap/",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "export": "next export",
-    "deploy": "npm run build && npm run export && gh-pages -d out",
-    "publish": "gh-pages -d out",
+    "deploy": "node deploy.js",
     "start": "next start",
     "lint": "eslint"
   },

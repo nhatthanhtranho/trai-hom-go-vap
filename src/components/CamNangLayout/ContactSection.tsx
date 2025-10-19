@@ -1,4 +1,4 @@
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import ProductTable from './ProductTable';
 
 const iconSize = 50;
@@ -40,7 +40,7 @@ const ContactSetion = () => {
                 src="/assets/images/facebook.webp"
                 width={iconSize}
                 height={iconSize}
-                alt="Zalo"
+                alt="Facebook"
               />
             </a>
 
@@ -54,7 +54,7 @@ const ContactSetion = () => {
                 src="/assets/images/youtube.webp"
                 width={iconSize}
                 height={iconSize}
-                alt="Zalo"
+                alt="Youtube"
               />
             </a>
           </div>

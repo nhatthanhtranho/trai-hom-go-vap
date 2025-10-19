@@ -2,7 +2,7 @@
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import Image from '@/components/CustomImage';
 import Link from 'next/link';
-import FaqSection from '@/components/FAQs/FAQs';
+import FaqSection from '@/components/FAQs';
 import type { GetStaticProps, Metadata } from 'next';
 
 const slug = 'lua-chon-dich-vu-hoa-tang-an-tam-tren-hanh-trinh-cuoi';

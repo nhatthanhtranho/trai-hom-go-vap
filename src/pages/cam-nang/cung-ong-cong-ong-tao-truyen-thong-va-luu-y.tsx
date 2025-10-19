@@ -1,7 +1,7 @@
 // app/cam-nang/cung-ong-cong-ong-tao-truyen-thong-va-luu-y/page.tsx
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import Image from '@/components/CustomImage';
-import FaqSection from '@/components/FAQs/FAQs';
+import FaqSection from '@/components/FAQs';
 import { GetStaticProps } from 'next';
 
 const title = 'Cúng Ông Công Ông Táo – Truyền Thống và Lưu Ý Quan Trọng';

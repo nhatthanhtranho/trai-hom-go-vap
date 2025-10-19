@@ -1,7 +1,7 @@
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import Image from '@/components/CustomImage';
 import type { GetStaticProps, Metadata } from 'next';
-import PostHeadline from '@/components/Post/PostHeadline';
+import PostHeadline from '@/components/PostHeadline';
 
 const slug = 'cung-com-cho-nguoi-moi-mat';
 const title = 'Cúng cơm cho người mới mất – Ý nghĩa, cách chuẩn bị và văn khấn chuẩn';

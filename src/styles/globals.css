@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root variables */
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+/* Body & Typography */
+body {
+  font-family:
+    ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+}
+
+html {
+  font-family: inherit;
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow-y: scroll;
+  /* luôn giữ thanh cuộn */
+}
+
+h1 {
+  @apply text-xl md:text-2xl lg:text-4xl font-bold text-gray-800;
+}
+
+h2 {
+  @apply text-xl md:text-2xl lg:text-3xl font-bold text-gray-800;
+}
+
+h3 {
+  @apply text-lg font-bold lg:text-xl;
+}
+
+h4 {
+  @apply text-sm font-semibold text-slate-700;
+}
+
+p {
+  @apply text-gray-600 text-base md:text-lg lg:text-xl;
+}
+
+/* Utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Box shadows */
+  .shadow-1 {
+    box-shadow: 20px 8px 40px -12px rgba(0, 0, 0, 0.62);
+  }
+
+  /* Golden borders */
+  .border-gold-2 {
+    border: 2px solid #efbf04;
+  }
+
+  .border-gold-3 {
+    border: 3px solid #efbf04;
+  }
+
+  .border-gold-4 {
+    border: 4px solid #efbf04;
+  }
+}
+
+.rotate {
+  animation: spin 100s linear infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Dots container */
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  /* khoảng cách giữa dots */
+}
+
+/* Dot mặc định */
+.swiper-pagination .custom-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #cfd6db;
+  /* vàng */
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Dot active */
+.swiper-pagination .swiper-pagination-bullet-active.custom-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ff6347;
+  /* đỏ */
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.cam-nang-layout h1 {
+  @apply text-4xl font-bold mt-2 text-gray-800 mb-6;
+}
+
+.cam-nang-layout h2 {
+  @apply text-2xl font-bold mt-8 text-gray-800 mb-4;
+}
+
+.cam-nang-layout h3 {
+  @apply text-xl font-bold text-gray-800 mb-2;
+}
+
+.cam-nang-layout p {
+  @apply text-lg text-gray-700 leading-relaxed mb-3;
+}
+
+.cam-nang-layout ul {
+  @apply list-disc ml-6 space-y-3 text-lg text-gray-700 mb-4;
+}
+
+.cam-nang-layout figure {
+  @apply h-64 md:h-96 w-full relative mb-4;
+}
+
+.cam-nang-layout img {
+  @apply object-center object-cover;
+}
+
+.cam-nang-layout ol {
+  @apply list-decimal ml-6 space-y-3 text-lg text-gray-700 mb-6;
+}
+
+.cam-nang-layout blockquote {
+  @apply border-l-4 border-yellow-600 pl-4 italic text-lg text-gray-700 mb-6;
+}

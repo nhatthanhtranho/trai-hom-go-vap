@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { formatLink } from '@/utils/formatLink';
-import Image from 'next/image';
+import Image from '@/components/CustomImage';
 
 interface PropTypes {
   className?: string;

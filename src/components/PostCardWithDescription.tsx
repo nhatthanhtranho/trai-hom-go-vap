@@ -21,7 +21,7 @@ const PostCardWithDescription: React.FC<PropTypes> = ({ title, url, content, dat
     <div className="flex items-start gap-3 cursor-pointer" onClick={handleClick}>
       {/* Hình */}
       <div className="relative w-52 h-44 flex-shrink-0 rounded-lg shadow overflow-hidden">
-        <Image fill src={formatLink(bannerURL)} alt={title} loading="lazy" className="object-cover" />
+        <Image fill src={bannerURL} alt={title} loading="lazy" className="object-cover" />
       </div>
 
       {/* Chữ */}

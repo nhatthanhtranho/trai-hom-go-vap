@@ -8,8 +8,8 @@ import { AppProps } from 'next/app';
 import CustomMetadata from '@/components/CustomMetadata';
 
 const Header = dynamic(() => import('@/components/Header'), { ssr: false });
-const Footer = dynamic(() => import('@/components/Footer/Footer'), { ssr: false });
-const Contact = dynamic(() => import('@/components/Contact/Contact'), { ssr: false });
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
+const Contact = dynamic(() => import('@/components/Contact'), { ssr: false });
 
 const CONTACTS = [
   { href: 'https://zalo.me/0913673661', icon: '/assets/images/zalo.webp', name: 'Zalo' },

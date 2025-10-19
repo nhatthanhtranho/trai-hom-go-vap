@@ -1,5 +1,5 @@
 import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
-import Image from 'next/image';
+import Image from '@/src/components/CustomImage';
 import type { GetStaticProps, Metadata } from 'next';
 import PostHeadline from '@/components/Post/PostHeadline';
 

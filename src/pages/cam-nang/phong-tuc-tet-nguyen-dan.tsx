@@ -1,7 +1,7 @@
 // app/cam-nang/phong-tuc-tet-nguyen-dan/page.tsx
 import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from '@/src/components/CustomImage';
 import { GetStaticProps } from 'next';
 const title = 'Phong Tục Tết Nguyên Đán Của Người Việt – Nét Đẹp Văn Hóa Ngàn Đời';
 const description =

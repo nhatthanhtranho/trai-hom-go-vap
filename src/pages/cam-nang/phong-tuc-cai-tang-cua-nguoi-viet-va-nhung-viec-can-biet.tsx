@@ -1,7 +1,7 @@
 // app/cam-nang/[slug]/page.tsx
 import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
-import Image from 'next/image';
+import Image from '@/src/components/CustomImage';
 
 const slug = 'phong-tuc-cai-tang-cua-nguoi-viet-va-nhung-viec-can-biet';
 const title = 'Phong tục cải táng của người Việt và những việc cần biết';

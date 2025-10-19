@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from '@/src/components/CustomImage';
 import ProductTable from './ProductTable';
 
 const iconSize = 50;

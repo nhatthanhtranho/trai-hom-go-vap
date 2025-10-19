@@ -1,5 +1,5 @@
 import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
-import Image from 'next/image';
+import Image from '@/src/components/CustomImage';
 import { GetStaticProps, Metadata } from 'next/types';
 
 const slug = 'cung-co-hon-thang-7';

@@ -1,7 +1,6 @@
-/* eslint-disable react/no-unescaped-entities */
 // app/cam-nang/[slug]/page.tsx
 
-import Image from 'next/image';
+import Image from '@/src/components/CustomImage';
 import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
 

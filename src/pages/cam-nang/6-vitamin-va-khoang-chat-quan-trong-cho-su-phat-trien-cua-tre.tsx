@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
-import Image from 'next/image';
+import Image from '@/src/components/CustomImage';
 import { GetStaticProps } from 'next/types';
 
 const slug = '6-vitamin-va-khoang-chat-quan-trong-cho-su-phat-trien-cua-tre';

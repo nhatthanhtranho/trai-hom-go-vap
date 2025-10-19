@@ -1,7 +1,7 @@
 import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
 import type { GetStaticProps, Metadata } from 'next';
-import ResponsiveImage from '@/components/Image/ResponsiveImage';
+import Image from '@/src/components/CustomImage'
 
 const slug = 'kinh-nghiem-chon-dich-vu-tang-le-tron-goi-uy-tin';
 const basePath = `/assets/images/cam-nang/${slug}`;
@@ -243,8 +243,8 @@ export default function Page() {
             lễ là lĩnh vực nhạy cảm, đòi hỏi trách nhiệm cao và minh bạch.
           </p>
 
-          <ResponsiveImage
-            imageSource={image1}
+          <Image
+            src={image1}
             alt="Nhân sự tổ chức tang lễ chuyên nghiệp"
             className="my-6 rounded overflow-hidden h-64"
           />
@@ -274,8 +274,8 @@ export default function Page() {
             tại nhà thờ/địa điểm tâm linh.
           </p>
 
-          <ResponsiveImage
-            imageSource={image2}
+          <Image
+            src={image2}
             alt="So sánh hỏa táng và an táng"
             className="my-6 rounded overflow-hidden h-64"
           />
@@ -332,8 +332,8 @@ export default function Page() {
             cố (hư hỏng tài sản, sai sót trong thủ tục), và có quy định bồi hoàn rõ ràng.
           </p>
 
-          <ResponsiveImage
-            imageSource={image3}
+          <Image
+            src={image3}
             alt="Kiểm tra giấy phép và hợp đồng dịch vụ tang lễ"
             className="my-6 rounded overflow-hidden h-64"
           />
@@ -432,8 +432,8 @@ export default function Page() {
             <li>Bảo đảm có người giám sát nến, thiết bị điện để tránh cháy nổ.</li>
           </ul>
 
-          <ResponsiveImage
-            imageSource={image4}
+          <Image
+            src={image4}
             alt="Checklist chuẩn bị tang lễ trước giờ diễn ra"
             className="my-6 rounded overflow-hidden h-64"
           />
@@ -501,8 +501,8 @@ export default function Page() {
             <li>Ghi lại mọi trao đổi (tin nhắn/email) để làm bằng chứng khi cần.</li>
           </ul>
 
-          <ResponsiveImage
-            imageSource={image5}
+          <Image
+            src={image5}
             alt="Gia đình tham khảo dịch vụ tang lễ"
             className="my-6 rounded overflow-hidden h-64"
           />

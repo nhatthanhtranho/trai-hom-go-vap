@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from '@/src/components/CustomImage';
 import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
 import { GetStaticProps } from 'next';

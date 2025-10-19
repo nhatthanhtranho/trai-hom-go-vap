@@ -1,6 +1,6 @@
 import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import type { GetStaticProps, Metadata } from 'next';
-import FigureImage from '@/components/ImageFigure';
+import FigureImage from '@/src/components/ImageFigure';
 const slug = 'chua-vinh-nghiem';
 const title = 'Chùa Vĩnh Nghiêm – Ngôi Chùa Linh Thiêng Giữa Lòng Sài Gòn';
 const description =

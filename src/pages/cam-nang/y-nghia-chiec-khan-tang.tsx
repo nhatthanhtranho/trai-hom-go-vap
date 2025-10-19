@@ -1,7 +1,7 @@
 // app/cam-nang/y-nghia-chiec-khan-tang/page.tsx
 import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
-import Image from 'next/image';
+import Image from '@/src/components/CustomImage';
 import { GetStaticProps } from 'next';
 
 const slug = 'y-nghia-chiec-khan-tang';

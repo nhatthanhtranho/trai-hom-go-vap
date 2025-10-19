@@ -1,8 +1,8 @@
 // app/cam-nang/[slug]/page.tsx
 /* eslint-disable react/no-unescaped-entities */
 
-import Image from '@/src/components/CustomImage';
-import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
+import Image from '@/components/CustomImage';
+import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
 
 const slug = 'vai-tro-cua-sach-tai-nhat-them-thu-vien-giup-giam-nhu-cau-dieu-duong';

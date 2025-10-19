@@ -9,7 +9,7 @@
     "build": "next build",
     "export": "next export",
     "deploy": "node deploy.js",
-    "start": "next start",
+    "deploy:aws": "aws s3 sync out s3://traihomgovap-host",
     "lint": "eslint"
   },
   "dependencies": {

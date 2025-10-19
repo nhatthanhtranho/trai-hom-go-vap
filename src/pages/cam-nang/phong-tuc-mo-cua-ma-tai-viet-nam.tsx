@@ -1,7 +1,7 @@
 // app/cam-nang/phong-tuc-mo-cua-ma/page.tsx
 
-import Image from '@/src/components/CustomImage';
-import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
+import Image from '@/components/CustomImage';
+import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
 import { GetStaticProps } from 'next';
 

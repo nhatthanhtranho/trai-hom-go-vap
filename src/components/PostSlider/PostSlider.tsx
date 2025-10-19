@@ -3,7 +3,7 @@
 import { SwiperSlide } from 'swiper/react';
 
 import CustomSwiper from '../CustomSwiper';
-import { Article } from '@/src/types/article';
+import { Article } from '@/types/article';
 import PostSliderCard from './PostSliderCard';
 
 export default function PostSlider({ articles }: { articles: Article[] }) {

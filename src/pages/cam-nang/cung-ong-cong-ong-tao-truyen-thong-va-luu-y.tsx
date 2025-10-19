@@ -1,6 +1,6 @@
 // app/cam-nang/cung-ong-cong-ong-tao-truyen-thong-va-luu-y/page.tsx
-import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
-import Image from '@/src/components/CustomImage';
+import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import Image from '@/components/CustomImage';
 import FaqSection from '@/components/FAQs/FAQs';
 import { GetStaticProps } from 'next';
 

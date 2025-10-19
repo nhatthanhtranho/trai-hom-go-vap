@@ -2,7 +2,7 @@
 'use client';
 
 import { useMemo, useState, useEffect } from 'react';
-import { Article } from '@/src/types/article';
+import { Article } from '@/types/article';
 import PostCard from '../PostCard';
 
 interface PropTypes {

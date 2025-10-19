@@ -1,6 +1,6 @@
 // app/cam-nang/lan-su-rong/page.tsx
-import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
-import Image from '@/src/components/CustomImage';
+import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import Image from '@/components/CustomImage';
 import Link from 'next/link';
 import type { GetStaticProps, Metadata } from 'next';
 

@@ -1,7 +1,7 @@
 // app/cam-nang/[slug]/page.tsx
 
-import Image from '@/src/components/CustomImage';
-import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
+import Image from '@/components/CustomImage';
+import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
 
 const slug = 'nhung-con-ho-keo-dai-nguyen-do-tu-dau';

@@ -1,7 +1,7 @@
-import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
-import FigureImage from '@/src/components/ImageFigure';
-import TableOfContents from '@/src/components/TableOfContent';
-import { TableOfContentItem } from '@/src/types/tableOfContentItem';
+import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import FigureImage from '@/components/ImageFigure';
+import TableOfContents from '@/components/TableOfContent';
+import { TableOfContentItem } from '@/types/tableOfContentItem';
 import type { Metadata } from 'next';
 
 const slug = 'phap-vien-minh-dang-quang';

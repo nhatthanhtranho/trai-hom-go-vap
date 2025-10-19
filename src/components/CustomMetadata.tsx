@@ -1,4 +1,4 @@
-import { SEOMetadata } from '@/src/types/seoMetadata'
+import { SEOMetadata } from '@/types/seoMetadata'
 import Head from 'next/head';
 
 export default function CustomMetadata({

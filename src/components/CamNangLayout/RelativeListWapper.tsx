@@ -1,15 +1,15 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import RelativeArticleList from '@/src/components/RelativeArticleList/RelativeArticleList';
-import { Article } from '@/src/types/article';
+import RelativeArticleList from '@/components/RelativeArticleList/RelativeArticleList';
+import { Article } from '@/types/article';
 
 export const getArticles = async (tag?: string): Promise<Article[]> => {
     let articles: Article[] = [];
 
     switch (tag) {
         default: {
-            const camNang = (await import('@/src/data/cam-nang.json')).default;
+            const camNang = (await import('@/data/cam-nang.json')).default;
             articles = [...camNang];
         }
     }

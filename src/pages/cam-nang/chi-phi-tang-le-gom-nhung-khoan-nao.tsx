@@ -1,5 +1,5 @@
-import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
-import Image from '@/src/components/CustomImage';
+import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import Image from '@/components/CustomImage';
 import type { GetStaticProps, Metadata } from 'next';
 
 const slug = 'chi-phi-tang-le-gom-nhung-khoan-nao';

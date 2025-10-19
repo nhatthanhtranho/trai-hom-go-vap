@@ -1,6 +1,6 @@
 // app/cam-nang/lua-chon-dich-vu-hoa-tang-an-tam-tren-hanh-trinh-cuoi/page.tsx
-import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
-import Image from '@/src/components/CustomImage';
+import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import Image from '@/components/CustomImage';
 import Link from 'next/link';
 import FaqSection from '@/components/FAQs/FAQs';
 import type { GetStaticProps, Metadata } from 'next';

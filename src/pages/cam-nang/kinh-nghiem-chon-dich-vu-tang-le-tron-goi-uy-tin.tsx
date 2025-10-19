@@ -1,7 +1,7 @@
-import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
+import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
 import type { GetStaticProps, Metadata } from 'next';
-import Image from '@/src/components/CustomImage'
+import Image from '@/components/CustomImage'
 
 const slug = 'kinh-nghiem-chon-dich-vu-tang-le-tron-goi-uy-tin';
 const basePath = `/assets/images/cam-nang/${slug}`;

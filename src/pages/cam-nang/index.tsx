@@ -1,13 +1,13 @@
 import { GetStaticProps, Metadata } from 'next';
 
-import BackToHomeButton from '@/src/components/BackToHomeButton';
-import SimpleSlider from '@/src/components/SimpleSlider';
-import articles from '@/src/data/cam-nang.json';
-import { Article } from '@/src/types/article';
-import { CardVariant } from '@/src/types/cardVariant';
-import PostCard from '@/src/components/PostCard';
-import PostSlider from '@/src/components/PostSlider/PostSlider';
-import PostCardWithDescription from '@/src/components/PostCardWithDescription';
+import BackToHomeButton from '@/components/BackToHomeButton';
+import SimpleSlider from '@/components/SimpleSlider';
+import articles from '@/data/cam-nang.json';
+import { Article } from '@/types/article';
+import { CardVariant } from '@/types/cardVariant';
+import PostCard from '@/components/PostCard';
+import PostSlider from '@/components/PostSlider/PostSlider';
+import PostCardWithDescription from '@/components/PostCardWithDescription';
 
 export const metadata: Metadata = {
   title: 'Cẩm Nang Tang Lễ | Kiến Thức & Hướng Dẫn Khi Nhà Có Đám Tang | Trại Hòm Sinh Phúc Thọ',

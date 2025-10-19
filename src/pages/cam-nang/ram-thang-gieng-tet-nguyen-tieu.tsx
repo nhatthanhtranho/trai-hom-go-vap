@@ -1,6 +1,6 @@
-import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
+import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
-import Image from '@/src/components/CustomImage';
+import Image from '@/components/CustomImage';
 
 const title = 'Nguồn gốc và ý nghĩa ngày Rằm tháng Giêng (Tết Nguyên Tiêu)';
 const description =

@@ -37,11 +37,11 @@ export const metadata: Metadata = {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      metadata, // 👈 truyền thủ công
-    },
-  };
+    return {
+        props: {
+            metadata, // 👈 truyền thủ công
+        },
+    };
 };
 
 export default function Article() {

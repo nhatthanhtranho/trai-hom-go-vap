@@ -3,7 +3,7 @@
 import Image from '@/components/CustomImage';
 import { useRouter } from 'next/navigation';
 import { formatLink } from '@/utils/formatLink';
-import { CardVariant } from '@/enums/CardVariant';
+import { CardVariant } from '@/types/cardVariant';
 
 export interface PropTypes {
   title: string;

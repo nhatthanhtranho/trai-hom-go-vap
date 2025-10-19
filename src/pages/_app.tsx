@@ -7,7 +7,7 @@ import Script from 'next/script';
 import { AppProps } from 'next/app';
 import CustomMetadata from '@/components/CustomMetadata';
 
-const Header = dynamic(() => import('@/components/Header/Header'), { ssr: false });
+const Header = dynamic(() => import('@/components/Header'), { ssr: false });
 const Footer = dynamic(() => import('@/components/Footer/Footer'), { ssr: false });
 const Contact = dynamic(() => import('@/components/Contact/Contact'), { ssr: false });
 

@@ -1,5 +1,5 @@
 // app/cam-nang/ngay-gio-to-tien/page.tsx
-import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
 import Image from 'next/image';
 import { GetStaticProps } from 'next';

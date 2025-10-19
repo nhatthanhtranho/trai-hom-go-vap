@@ -1,4 +1,4 @@
-import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import ResponsiveImage from '@/components/Image/ResponsiveImage';
 import type { GetStaticProps, Metadata } from 'next';
 

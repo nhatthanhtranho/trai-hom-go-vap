@@ -1,8 +1,8 @@
 // app/cam-nang/[slug]/page.tsx
 
 import Image from 'next/image';
-import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
+import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 
 const slug = 'bi-quyet-chon-hoa-trang-tri-ban-tho-tang-le-trong-van-hoa-viet';
 const title = 'Bí quyết chọn hoa trang trí bàn thờ tang lễ trong văn hóa Việt';

@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
 import type { GetStaticProps, Metadata } from 'next';
 

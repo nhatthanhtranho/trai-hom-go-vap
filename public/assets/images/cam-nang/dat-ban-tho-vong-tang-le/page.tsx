@@ -1,5 +1,5 @@
 import Image from '@/components/CustomImage';
-import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
 import { Metadata } from 'next/types';
 

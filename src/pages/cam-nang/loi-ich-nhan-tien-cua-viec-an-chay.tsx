@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import Image from 'next/image';
-import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
 
 const slug = 'loi-ich-nhan-tien-cua-viec-an-chay';

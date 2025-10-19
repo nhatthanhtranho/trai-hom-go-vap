@@ -1,5 +1,5 @@
 // app/cam-nang/lua-chon-dich-vu-hoa-tang-an-tam-tren-hanh-trinh-cuoi/page.tsx
-import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import Image from 'next/image';
 import Link from 'next/link';
 import FaqSection from '@/components/FAQs/FAQs';

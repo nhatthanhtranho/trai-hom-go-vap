@@ -2,7 +2,7 @@
 // app/cam-nang/[slug]/page.tsx
 
 import Image from 'next/image';
-import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
 
 const slug = 'cach-viet-dieu-van-tang-le-ngan-gon-xuc-dong';

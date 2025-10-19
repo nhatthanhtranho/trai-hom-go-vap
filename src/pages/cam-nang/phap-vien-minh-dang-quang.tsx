@@ -1,4 +1,4 @@
-import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import FigureImage from '@/components/ImageFigure';
 import TableOfContents from '@/components/TableOfContent';
 import { TableOfContentItem } from '@/schema/tableOfContent.schema';

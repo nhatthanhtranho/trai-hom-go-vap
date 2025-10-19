@@ -1,4 +1,4 @@
-import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import type { GetStaticProps, Metadata } from 'next';
 import FigureImage from '@/components/ImageFigure';
 const slug = 'chua-vinh-nghiem';

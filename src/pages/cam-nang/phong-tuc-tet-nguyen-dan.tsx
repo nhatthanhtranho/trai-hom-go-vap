@@ -1,5 +1,5 @@
 // app/cam-nang/phong-tuc-tet-nguyen-dan/page.tsx
-import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import Link from 'next/link';
 import Image from 'next/image';
 import { GetStaticProps } from 'next';

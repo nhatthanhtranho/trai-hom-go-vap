@@ -1,7 +1,7 @@
 // app/cam-nang/tet-doan-ngo-y-nghia-phong-tuc-mon-an-truyen-thong/page.tsx
 
 import Image from 'next/image';
-import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
 
 const slug = 'tet-doan-ngo-nguon-goc-y-nghia';

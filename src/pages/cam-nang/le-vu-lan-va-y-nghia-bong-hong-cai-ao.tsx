@@ -1,4 +1,4 @@
-import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import CamNangLayout from '@/src/components/CamNangLayout/CamNangLayout';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { GetStaticProps, Metadata } from 'next';

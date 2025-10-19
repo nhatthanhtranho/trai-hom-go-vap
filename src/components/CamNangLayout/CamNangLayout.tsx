@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 import type { Viewport } from 'next';
-import { Article } from '@/schema/article.schema';
+import { Article } from '@/src/types/article';
 import SimpleSlider from '../ImageSlider';
 import ContactSection from '../ContactSection';
 import RelativeArticleList from '../RelativeArticleList/RelativeArticleList';

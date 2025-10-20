@@ -1,8 +1,15 @@
 /** @type {import('next').NextConfig} */
 const isAWS = process.env.NEXT_PUBLIC_ENV === "AWS";
 const isProd = process.env.NEXT_PUBLIC_ENV === "PRODUCTION";
-const basePath = isProd ? "/trai-hom-go-vap" : "";
-const assetPrefix = isProd ? "/trai-hom-go-vap/" : isAWS ? process.env.NEXT_PUBLIC_CLOUDFRONT_URL : "";
+let basePath = "";
+let assetPrefix = "";
+
+if (!isAWS) {
+  if (isProd) {
+    basePath = "/trai-hom-go-vap";
+    assetPrefix = "/trai-hom-go-vap/";
+  }
+}
 const nextConfig = {
   output: "export",
   images: {

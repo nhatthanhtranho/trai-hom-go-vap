@@ -11,12 +11,9 @@ export function formatLink(url: string) {
 
 
 export function formatBacklink(url: string) {
-  if (process.env.NEXT_PUBLIC_ENV === "PRODUCTION") {
-    return `https://sinhphuctho.com${url}.html`;
-  }
   if (url === "/" || url === "") {
-    return "https://sinhphuctho.com/";
+    return "https://sinhphuctho.com";
   }
 
-  return `${url}`;
+  return `https://sinhphuctho.com${url}.html`;
 }

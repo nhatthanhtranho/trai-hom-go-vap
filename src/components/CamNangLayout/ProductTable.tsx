@@ -1,4 +1,4 @@
-import { formatLink } from '@/utils/formatLink';
+import { formatBacklink, formatLink } from '@/utils/formatLink';
 import Link from 'next/link';
 import React from 'react';
 
@@ -12,55 +12,55 @@ interface FuneralPackage {
 const packages: FuneralPackage[] = [
   {
     name: 'Gói Hỏa Táng Hỗ Trợ',
-    url: formatLink('/cac-goi-hoa-tang/goi-hoa-tang-ho-tro'),
+    url: formatBacklink('/cac-goi-hoa-tang/goi-hoa-tang-ho-tro'),
     price: 'Liên hệ',
     note: 'Chi phí hợp lý, đầy đủ nghi thức cơ bản',
   },
   {
     name: 'Gói Hỏa Táng Tiết Kiệm',
-    url: formatLink('/cac-goi-hoa-tang/goi-hoa-tang-tiet-kiem'),
+    url: formatBacklink('/cac-goi-hoa-tang/goi-hoa-tang-tiet-kiem'),
     price: '30.000.000₫',
     note: 'Tiết kiệm chi phí, chu đáo và trang nghiêm',
   },
   {
     name: 'Gói Hỏa Táng Tiêu Chuẩn',
-    url: formatLink('/cac-goi-hoa-tang/goi-hoa-tang-tieu-chuan'),
+    url: formatBacklink('/cac-goi-hoa-tang/goi-hoa-tang-tieu-chuan'),
     price: '35.000.000₫',
     note: 'Đáp ứng đầy đủ nghi lễ cơ bản',
   },
   {
     name: 'Gói Hỏa Táng Trang Trọng',
-    url: formatLink('/cac-goi-hoa-tang/goi-hoa-tang-trang-trong'),
+    url: formatBacklink('/cac-goi-hoa-tang/goi-hoa-tang-trang-trong'),
     price: '45.000.000₫',
     note: 'Trang nghiêm, đầy đủ nghi lễ truyền thống',
   },
   {
     name: 'Gói Hỏa Táng Tâm An',
-    url: formatLink('/cac-goi-hoa-tang/goi-hoa-tang-tam-an'),
+    url: formatBacklink('/cac-goi-hoa-tang/goi-hoa-tang-tam-an'),
     price: '50.000.000₫',
     note: 'Chu toàn từ chuẩn bị đến nghi lễ',
   },
   {
     name: 'Gói An Táng Tiết Kiệm',
-    url: formatLink('/cac-goi-an-tang/goi-an-tang-tiet-kiem'),
+    url: formatBacklink('/cac-goi-an-tang/goi-an-tang-tiet-kiem'),
     price: '70.000.000₫',
     note: 'Chi phí tiết kiệm, nghi lễ chu đáo',
   },
   {
     name: 'Gói An Táng Tiêu Chuẩn',
-    url: formatLink('/cac-goi-an-tang/goi-an-tang-tieu-chuan'),
+    url: formatBacklink('/cac-goi-an-tang/goi-an-tang-tieu-chuan'),
     price: '85.000.000₫',
     note: 'Trang nghiêm, đầy đủ nghi thức và tiết kiệm',
   },
   {
     name: 'Gói An Táng Trang Trọng',
-    url: formatLink('/cac-goi-an-tang/goi-an-tang-trang-trong'),
+    url: formatBacklink('/cac-goi-an-tang/goi-an-tang-trang-trong'),
     price: '110.000.000₫',
     note: 'Chỉn chu, truyền thống và đầy đủ nghi lễ',
   },
   {
     name: 'Gói An Táng Cao Cấp',
-    url: formatLink('/cac-goi-an-tang/goi-an-tang-cao-cap'),
+    url: formatBacklink('/cac-goi-an-tang/goi-an-tang-cao-cap'),
     price: '140.000.000₫',
     note: 'Đẳng cấp, riêng tư và tôn kính',
   },
@@ -120,7 +120,7 @@ const ProductTable: React.FC = () => {
           </span>
         </p>
         <Link
-          href={formatLink('/lien-he')}
+          href={formatBacklink('/lien-he')}
           className="inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded text-xs md:text-base font-medium transition"
         >
           Liên hệ tư vấn ngay

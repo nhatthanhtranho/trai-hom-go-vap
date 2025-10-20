@@ -54,14 +54,22 @@ const Header = () => {
 
           {/* Logo chữ căn giữa */}
           <div className="absolute left-1/2 -translate-x-1/2 cursor-pointer">
-            <Link href={'/'}>
+            <Link
+              href="/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <h2 className="text-xl font-bold tracking-wide">SINH PHÚC THỌ</h2>
             </Link>
           </div>
 
           {/* Icon Home bên phải */}
-          <Link href={formatBacklink('/')} className="p-1.5 text-gray-600 hover:text-black">
-            {/* 👉 Bạn có thể đổi icon tùy thích */}
+          <Link
+            href={formatBacklink('/')}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1.5 text-gray-600 hover:text-black"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -82,28 +90,33 @@ const Header = () => {
         {/* --- Desktop layout --- */}
         <div className="hidden lg:flex w-full items-center justify-between">
           {/* Logo bên trái */}
-          <Link href={'/'}>
+          <Link
+            href="/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <h2 className="text-xl font-bold tracking-wide cursor-pointer">SINH PHÚC THỌ</h2>
           </Link>
 
           {/* Menu desktop */}
           <nav className="flex space-x-6 font-medium">
-            <Link href={'/'}>Trang Chủ</Link>
-            <Link href={formatBacklink('/ve-chung-toi')}>Về Chúng Tôi</Link>
-            <Link href={formatBacklink('/cac-goi-hoa-tang')}>Hỏa Táng</Link>
-            <Link href={formatBacklink('/cac-goi-an-tang')}>An Táng</Link>
-            <Link href={formatBacklink('/cac-loai-ao-quan')}>Áo Quan</Link>
-            <Link href={formatBacklink('/dich-vu-them')}>Dịch Vụ Thêm</Link>
-            <Link href={formatBacklink('/cam-nang')}>Cẩm Nang</Link>
-            <Link href={formatBacklink('/lien-he')}>Liên Hệ</Link>
+            <Link href="/" target="_blank" rel="noopener noreferrer">Trang Chủ</Link>
+            <Link href={formatBacklink('/ve-chung-toi')} target="_blank" rel="noopener noreferrer">Về Chúng Tôi</Link>
+            <Link href={formatBacklink('/cac-goi-hoa-tang')} target="_blank" rel="noopener noreferrer">Hỏa Táng</Link>
+            <Link href={formatBacklink('/cac-goi-an-tang')} target="_blank" rel="noopener noreferrer">An Táng</Link>
+            <Link href={formatBacklink('/cac-loai-ao-quan')} target="_blank" rel="noopener noreferrer">Áo Quan</Link>
+            <Link href={formatBacklink('/dich-vu-them')} target="_blank" rel="noopener noreferrer">Dịch Vụ Thêm</Link>
+            <Link href={formatBacklink('/cam-nang')} target="_blank" rel="noopener noreferrer">Cẩm Nang</Link>
+            <Link href={formatBacklink('/lien-he')} target="_blank" rel="noopener noreferrer">Liên Hệ</Link>
           </nav>
         </div>
       </div>
 
       {/* Overlay ngoài (blur) */}
       <div
-        className={`fixed inset-0 z-40 transition-opacity duration-300 bg-black/30 backdrop-blur-sm ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-          }`}
+        className={`fixed inset-0 z-40 transition-opacity duration-300 bg-black/30 backdrop-blur-sm ${
+          isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+        }`}
         onClick={() => setIsMenuOpen(false)}
       />
 
@@ -135,34 +148,18 @@ const Header = () => {
 
         {/* Section 1: Dịch vụ chính */}
         <nav className="p-6 space-y-4 text-lg font-medium border-b border-gray-200 flex flex-col">
-          <Link href={formatBacklink('/')} onClick={() => setIsMenuOpen(false)}>
-            Trang Chủ
-          </Link>
-          <Link href={formatBacklink('/ve-chung-toi')} onClick={() => setIsMenuOpen(false)}>
-            Về Chúng Tôi
-          </Link>
-          <Link href={formatBacklink('/cac-goi-hoa-tang')} onClick={() => setIsMenuOpen(false)}>
-            Hỏa Táng
-          </Link>
-          <Link href={formatBacklink('/cac-goi-an-tang')} onClick={() => setIsMenuOpen(false)}>
-            An Táng
-          </Link>
-          <Link href={formatBacklink('/cac-loai-ao-quan')} onClick={() => setIsMenuOpen(false)}>
-            Áo Quan
-          </Link>
+          <Link href="/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>Trang Chủ</Link>
+          <Link href={formatBacklink('/ve-chung-toi')} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>Về Chúng Tôi</Link>
+          <Link href={formatBacklink('/cac-goi-hoa-tang')} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>Hỏa Táng</Link>
+          <Link href={formatBacklink('/cac-goi-an-tang')} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>An Táng</Link>
+          <Link href={formatBacklink('/cac-loai-ao-quan')} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>Áo Quan</Link>
         </nav>
 
         {/* Section 2: Bổ sung */}
         <nav className="p-6 space-y-4 text-lg font-medium flex flex-col">
-          <Link href={formatBacklink('/dich-vu-them')} onClick={() => setIsMenuOpen(false)}>
-            Dịch Vụ Thêm
-          </Link>
-          <Link href={formatBacklink('/cam-nang')} onClick={() => setIsMenuOpen(false)}>
-            Cẩm Nang
-          </Link>
-          <Link href={formatBacklink('/lien-he')} onClick={() => setIsMenuOpen(false)}>
-            Liên Hệ
-          </Link>
+          <Link href={formatBacklink('/dich-vu-them')} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>Dịch Vụ Thêm</Link>
+          <Link href={formatBacklink('/cam-nang')} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>Cẩm Nang</Link>
+          <Link href={formatBacklink('/lien-he')} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>Liên Hệ</Link>
         </nav>
       </div>
     </header>

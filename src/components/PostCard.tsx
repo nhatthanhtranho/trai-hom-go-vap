@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Image from '@/components/CustomImage';
-import { useRouter } from 'next/navigation';
-import { formatLink } from '@/utils/formatLink';
-import { CardVariant } from '@/types/cardVariant';
+import Image from "@/components/CustomImage";
+import { useRouter } from "next/navigation";
+import { formatLink } from "@/utils/formatLink";
+import { CardVariant } from "@/types/cardVariant";
 
 export interface PropTypes {
   title: string;
@@ -19,7 +19,7 @@ const PostCard: React.FC<PropTypes> = ({
   url,
   variant,
   content,
-  date
+  date,
 }) => {
   const router = useRouter();
   const handleClick = () => {
@@ -69,8 +69,10 @@ const PostCard: React.FC<PropTypes> = ({
         <div className="col-span-5 md:col-span-full rounded shadow overflow-hidden relative h-24 md:h-44">
           <Image fill className="object-cover" src={bannerURL} alt={title} />
         </div>
-        <h3 className="col-span-7 md:col-span-12 font-semibold text-lg">{title}</h3>
-        <p className="text-gray-700 col-span-12 line-clamp-3 mt-2">{content}</p>
+        <h3 className="col-span-7 md:col-span-12">
+          {title}
+        </h3>
+        <p className="col-span-12 mt-2 text-base line-clamp-3">{content}</p>
       </div>
     );
   }
@@ -94,11 +96,12 @@ const PostCard: React.FC<PropTypes> = ({
 
       {/* Text */}
       <div className="flex flex-col justify-center ml-3 flex-1">
-        <p className='text-xs text-gray-600'>{date}</p>
-        <p className="font-semibold text-sm leading-snug line-clamp-2">{title}</p>
+        <p className="text-xs text-gray-600">{date}</p>
+        <p className="font-semibold text-sm leading-snug line-clamp-2">
+          {title}
+        </p>
       </div>
     </div>
-
   );
 };
 

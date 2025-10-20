@@ -15,7 +15,7 @@ const PostSliderCard: React.FC<PropTypes> = ({ title, url }) => {
   const bannerURL = `/assets/images${url}/banner.webp`;
 
   return (
-    <div className="" onClick={handleClick}>
+    <div className="cursor-pointer" onClick={handleClick}>
       {/* Thumbnail */}
       <div className="relative w-full h-32 rounded-lg shadow overflow-hidden mb-2">
         <Image fill src={bannerURL} alt={title} loading="lazy" className="object-cover" />

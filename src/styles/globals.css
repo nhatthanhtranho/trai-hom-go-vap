@@ -7,11 +7,32 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+@layer base {
+  h1 {
+    @apply text-xl md:text-2xl lg:text-4xl font-bold text-gray-800;
+  }
+
+  h2 {
+    @apply text-xl md:text-2xl lg:text-3xl font-bold text-gray-800;
+  }
+
+  h3 {
+    @apply text-lg font-bold lg:text-xl;
+  }
+
+  h4 {
+    @apply text-sm font-semibold text-slate-700;
+  }
+
+  p {
+    @apply text-gray-600 text-base md:text-lg lg:text-xl;
+  }
+}
+
 /* Body & Typography */
 body {
-  font-family:
-    ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-    'Noto Color Emoji';
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 html {
@@ -22,26 +43,6 @@ html {
 html {
   overflow-y: scroll;
   /* luôn giữ thanh cuộn */
-}
-
-h1 {
-  @apply text-xl md:text-2xl lg:text-4xl font-bold text-gray-800;
-}
-
-h2 {
-  @apply text-xl md:text-2xl lg:text-3xl font-bold text-gray-800;
-}
-
-h3 {
-  @apply text-lg font-bold lg:text-xl;
-}
-
-h4 {
-  @apply text-sm font-semibold text-slate-700;
-}
-
-p {
-  @apply text-gray-600 text-base md:text-lg lg:text-xl;
 }
 
 /* Utilities */

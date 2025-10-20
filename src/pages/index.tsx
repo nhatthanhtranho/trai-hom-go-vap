@@ -1,44 +1,45 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { GetStaticProps, Metadata } from 'next';
+import { GetStaticProps, Metadata } from "next";
 
-import BackToHomeButton from '@/components/BackToHomeButton';
-import articles from '@/data/cam-nang.json';
-import { Article } from '@/types/article';
-import { CardVariant } from '@/types/cardVariant';
-import PostCard from '@/components/PostCard';
-import PostSlider from '@/components/PostSlider/PostSlider';
-import PostCardWithDescription from '@/components/PostCardWithDescription';
+import BackToHomeButton from "@/components/BackToHomeButton";
+import articles from "@/data/cam-nang.json";
+import { Article } from "@/types/article";
+import { CardVariant } from "@/types/cardVariant";
+import PostCard from "@/components/PostCard";
+import PostSlider from "@/components/PostSlider/PostSlider";
+import PostCardWithDescription from "@/components/PostCardWithDescription";
 
 export const metadata: Metadata = {
-  title: 'Cẩm Nang Tang Lễ | Kiến Thức & Hướng Dẫn Khi Nhà Có Đám Tang | Trại Hòm Sinh Phúc Thọ',
+  title:
+    "Cẩm Nang Tang Lễ | Kiến Thức & Hướng Dẫn Khi Nhà Có Đám Tang | Trại Hòm Sinh Phúc Thọ",
   description:
-    'Tổng hợp các bài viết cẩm nang chi tiết về thủ tục, nghi thức và kinh nghiệm khi nhà có tang. Hướng dẫn tổ chức tang lễ chu đáo, đúng phong tục Việt Nam từ Trại Hòm Sinh Phúc Thọ Gò Vấp.',
+    "Tổng hợp các bài viết cẩm nang chi tiết về thủ tục, nghi thức và kinh nghiệm khi nhà có tang. Hướng dẫn tổ chức tang lễ chu đáo, đúng phong tục Việt Nam từ Trại Hòm Sinh Phúc Thọ Gò Vấp.",
   keywords:
-    'cẩm nang tang lễ, thủ tục tang lễ, kinh nghiệm tổ chức tang lễ, hướng dẫn khi nhà có tang, nghi thức tang lễ, mai táng trọn gói, Trại Hòm Sinh Phúc Thọ',
+    "cẩm nang tang lễ, thủ tục tang lễ, kinh nghiệm tổ chức tang lễ, hướng dẫn khi nhà có tang, nghi thức tang lễ, mai táng trọn gói, Trại Hòm Sinh Phúc Thọ",
   openGraph: {
-    title: 'Cẩm Nang Tang Lễ | Trại Hòm Sinh Phúc Thọ Gò Vấp',
+    title: "Cẩm Nang Tang Lễ | Trại Hòm Sinh Phúc Thọ Gò Vấp",
     description:
-      'Trại Hòm Sinh Phúc Thọ chia sẻ cẩm nang tang lễ đầy đủ, từ thủ tục pháp lý, nghi thức tôn giáo đến các kinh nghiệm tổ chức tang lễ chu đáo và tiết kiệm.',
-    url: 'https://sinhphuctho.com/cam-nang.html',
-    type: 'website',
+      "Trại Hòm Sinh Phúc Thọ chia sẻ cẩm nang tang lễ đầy đủ, từ thủ tục pháp lý, nghi thức tôn giáo đến các kinh nghiệm tổ chức tang lễ chu đáo và tiết kiệm.",
+    url: "https://sinhphuctho.com/cam-nang.html",
+    type: "website",
     images: [
       {
-        url: '/assets/images/cam-nang/cam-nang-banner.webp',
+        url: "/assets/images/cam-nang/cam-nang-banner.webp",
         width: 1600,
         height: 1030,
-        alt: 'Cẩm nang tang lễ từ Trại Hòm Sinh Phúc Thọ',
-        type: 'image/webp',
+        alt: "Cẩm nang tang lễ từ Trại Hòm Sinh Phúc Thọ",
+        type: "image/webp",
       },
     ],
-    locale: 'vi_VN',
-    siteName: 'Trại Hòm Sinh Phúc Thọ',
+    locale: "vi_VN",
+    siteName: "Trại Hòm Sinh Phúc Thọ",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Cẩm Nang Tang Lễ | Trại Hòm Sinh Phúc Thọ',
+    card: "summary_large_image",
+    title: "Cẩm Nang Tang Lễ | Trại Hòm Sinh Phúc Thọ",
     description:
-      'Kiến thức và hướng dẫn chi tiết khi nhà có tang từ Trại Hòm Sinh Phúc Thọ. Tang lễ chu đáo, đúng phong tục, trọn gói tại TP.HCM.',
-    images: ['/assets/images/cam-nang/cam-nang-banner.webp'],
+      "Kiến thức và hướng dẫn chi tiết khi nhà có tang từ Trại Hòm Sinh Phúc Thọ. Tang lễ chu đáo, đúng phong tục, trọn gói tại TP.HCM.",
+    images: ["/assets/images/cam-nang/cam-nang-banner.webp"],
   },
 };
 
@@ -84,14 +85,17 @@ export default function Page() {
         </h1>
         <p className="text-lg leading-relaxed mb-6">
           <strong>
-            Hướng dẫn chi tiết từng bước để chuẩn bị và tổ chức lễ tang chu đáo, trang nghiêm
+            Hướng dẫn chi tiết từng bước để chuẩn bị và tổ chức lễ tang chu đáo,
+            trang nghiêm
           </strong>
-          .<br /> Trong những thời khắc mất mát, việc chuẩn bị cho một lễ tang không chỉ là trách
-          nhiệm mà còn là cách để thể hiện lòng thành kính, tri ân người đã khuất. Cẩm nang tang lễ
-          cung cấp thông tin thiết thực về các thủ tục, nghi lễ, giấy tờ pháp lý, phong tục tập quán
-          theo vùng miền, cũng như những điều cần lưu ý khi tổ chức tang lễ. Chúng tôi mong muốn
-          giúp gia đình vượt qua giai đoạn khó khăn này một cách nhẹ nhàng và trang trọng nhất.
-        </p>{' '}
+          .<br /> Trong những thời khắc mất mát, việc chuẩn bị cho một lễ tang
+          không chỉ là trách nhiệm mà còn là cách để thể hiện lòng thành kính,
+          tri ân người đã khuất. Cẩm nang tang lễ cung cấp thông tin thiết thực
+          về các thủ tục, nghi lễ, giấy tờ pháp lý, phong tục tập quán theo vùng
+          miền, cũng như những điều cần lưu ý khi tổ chức tang lễ. Chúng tôi
+          mong muốn giúp gia đình vượt qua giai đoạn khó khăn này một cách nhẹ
+          nhàng và trang trọng nhất.
+        </p>{" "}
         <div className="grid grid-cols-12 gap-4 lg:border-b md:pb-4">
           <div className="order-3 lg:order-1 hidden lg:block lg:col-span-3">
             {renderPosts(leftPosts ?? [])}
@@ -101,8 +105,8 @@ export default function Page() {
               variant={CardVariant.Center}
               key={999}
               url={`${centerPost?.slug}`}
-              title={centerPost?.title || ''}
-              content={centerPost?.content || ''}
+              title={centerPost?.title || ""}
+              content={centerPost?.content || ""}
             />
           </div>
           <div className="col-span-12 order-2 md:col-span-4 lg:col-span-3">

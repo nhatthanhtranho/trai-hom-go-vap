@@ -1,9 +1,19 @@
 'use client';
 
-import { formatLink } from '@/utils/formatLink';
 import Image, { ImageProps } from 'next/image';
 import React from 'react';
 
+
+function formatLinkImage(url: string) {
+  if (process.env.NEXT_PUBLIC_ENV === "PRODUCTION") {
+    return `${process.env.NEXT_PUBLIC_ASSETS_PATH}${url}`;
+  }
+  if (url === "/" || url === "") {
+    return "/";
+  }
+
+  return `${url}`;
+}
 interface CustomImageProps
   extends Omit<ImageProps, 'src' | 'alt' | 'fill' | 'width' | 'height'> {
   src: string;
@@ -33,7 +43,7 @@ const CustomImage: React.FC<CustomImageProps> = ({
 
   return (
     <Image
-      src={formatLink(src)}
+      src={formatLinkImage(src)}
       className={className}
       alt={alt}
       {...imageProps}

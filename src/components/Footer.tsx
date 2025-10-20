@@ -9,7 +9,7 @@ interface PropTypes {
   className?: string;
 }
 
-const Footer: React.FC<PropTypes> = _ => {
+const Footer: React.FC<PropTypes> = () => {
   return (
     <footer className="bg-[#303030] relative flex items-center justify-center overflow-hidden">
       {/* Trống đồng xoay */}
@@ -39,7 +39,7 @@ const Footer: React.FC<PropTypes> = _ => {
                 className="mr-4"
               />
               <div>
-                <h2 className="!text-white text-xl font-bold ">SINH PHÚC THỌ</h2>
+                <h2 className="!text-white text-xl font-bold">SINH PHÚC THỌ</h2>
                 <p className="!text-sm !text-white font-semibold">
                   Tận tâm - Chuyên nghiệp - Minh bạch
                 </p>
@@ -85,8 +85,14 @@ const Footer: React.FC<PropTypes> = _ => {
                 ['Gói An Táng Phúc Thọ', '/cac-goi-an-tang/goi-an-tang-phuc-tho'],
               ].map(([name, href]) => (
                 <li key={href}>
-                  <Link href={formatBacklink(href)} className="underline">
-                    {name}
+                  <Link href={formatBacklink(href)} passHref legacyBehavior>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-gray-300"
+                    >
+                      {name}
+                    </a>
                   </Link>
                 </li>
               ))}
@@ -108,8 +114,14 @@ const Footer: React.FC<PropTypes> = _ => {
                 ['Gói Hỏa Táng Phúc Thọ', '/cac-goi-hoa-tang/goi-hoa-tang-phuc-tho'],
               ].map(([name, href]) => (
                 <li key={href}>
-                  <Link href={formatBacklink(href)} className="underline">
-                    {name}
+                  <Link href={formatBacklink(href)} passHref legacyBehavior>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-gray-300"
+                    >
+                      {name}
+                    </a>
                   </Link>
                 </li>
               ))}
@@ -121,48 +133,23 @@ const Footer: React.FC<PropTypes> = _ => {
             <h3 className="text-lg font-semibold mb-4 text-white">Liên hệ</h3>
             <ul className="space-y-3 text-sm text-white">
               <li className="flex items-start gap-2">
-                <Image
-                  src={'/assets/images/icons/book.webp'}
-                  alt="Icon Book"
-                  width={18}
-                  height={18}
-                />
+                <Image src={'/assets/images/icons/book.webp'} alt="Icon Book" width={18} height={18} />
                 Mã số hộ KD 8408782580, cấp ngày 12/4/2021
               </li>
               <li className="flex items-start gap-2">
-                <Image
-                  src={'/assets/images/icons/location.webp'}
-                  alt="Icon Location"
-                  width={18}
-                  height={18}
-                />
+                <Image src={'/assets/images/icons/location.webp'} alt="Icon Location" width={18} height={18} />
                 119 Nguyễn Du, P1, Gò Vấp, HCM
               </li>
               <li className="flex items-start gap-2">
-                <Image
-                  src={'/assets/images/icons/sms.webp'}
-                  alt="Icon Sms"
-                  width={18}
-                  height={18}
-                />
-                nhatthanhtranho@gmail.com
+                <Image src={'/assets/images/icons/sms.webp'} alt="Icon Sms" width={18} height={18} />
+                traihomsinhphuctho@gmail.com
               </li>
               <li className="flex items-start gap-2">
-                <Image
-                  src={'/assets/images/icons/call.webp'}
-                  alt="Icon Call"
-                  width={18}
-                  height={18}
-                />
+                <Image src={'/assets/images/icons/call.webp'} alt="Icon Call" width={18} height={18} />
                 0913.673.661 (Thanh Thời)
               </li>
               <li className="flex items-start gap-2">
-                <Image
-                  src={'/assets/images/icons/call.webp'}
-                  alt="Icon Call"
-                  width={18}
-                  height={18}
-                />
+                <Image src={'/assets/images/icons/call.webp'} alt="Icon Call" width={18} height={18} />
                 0986.124.780 (Kim Hương)
               </li>
             </ul>
@@ -172,7 +159,6 @@ const Footer: React.FC<PropTypes> = _ => {
         {/* Footer bottom */}
         <div className="flex flex-col sm:flex-row justify-between items-center border-t pt-6 text-sm text-white gap-4">
           <span>© 2024 - Cơ Sở Mai Táng Trại Hòm Sinh Phúc Thọ Gò Vấp. All rights reserved.</span>
-
         </div>
       </div>
     </footer>

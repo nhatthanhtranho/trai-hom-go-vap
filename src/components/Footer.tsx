@@ -39,13 +39,13 @@ const Footer: React.FC<PropTypes> = _ => {
                 className="mr-4"
               />
               <div>
-                <h2 className="!text-white text-xl font-bold ">SINH PHÚC THỌ</h2>
-                <p className="!text-sm !text-white font-semibold">
+                <h2 className="text-white text-xl font-bold ">SINH PHÚC THỌ</h2>
+                <p className="text-sm text-white font-semibold">
                   Tận tâm - Chuyên nghiệp - Minh bạch
                 </p>
               </div>
             </div>
-            <p className="!text-sm !text-white mt-2">
+            <p className="text-sm text-white mt-2">
               Với hơn 20 năm kinh nghiệm, Sinh Phúc Thọ tự hào là một trong những đơn vị uy tín hàng
               đầu tại TP. Hồ Chí Minh trong lĩnh vực tổ chức tang lễ trọn gói.
             </p>

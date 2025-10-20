@@ -7,10 +7,10 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "build:aws": "cross-env NEXT_PUBLIC_ENV=AWS next build",
+    "build:aws": "cross-env NEXT_PUBLIC_ASSETS_PATH=https://traihomgovap.com next build",
     "export": "next export",
     "deploy": "node deploy.js",
-    "deploy:aws": "npm run build:aws && dotenv -e .env.aws -- aws s3 sync out s3://traihomgovap-host",
+    "deploy:aws": "npm run build:aws && cross-env NEXT_PUBLIC_ENV=AWS aws s3 sync out s3://traihomgovap-host",
     "lint": "eslint"
   },
   "dependencies": {

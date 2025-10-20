@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { formatLink } from '@/utils/formatLink';
+import { formatBacklink } from '@/utils/formatLink';
 import Image from '@/components/CustomImage';
 
 interface PropTypes {
@@ -85,7 +85,7 @@ const Footer: React.FC<PropTypes> = _ => {
                 ['Gói An Táng Phúc Thọ', '/cac-goi-an-tang/goi-an-tang-phuc-tho'],
               ].map(([name, href]) => (
                 <li key={href}>
-                  <Link href={formatLink(href)} className="underline">
+                  <Link href={formatBacklink(href)} className="underline">
                     {name}
                   </Link>
                 </li>
@@ -108,7 +108,7 @@ const Footer: React.FC<PropTypes> = _ => {
                 ['Gói Hỏa Táng Phúc Thọ', '/cac-goi-hoa-tang/goi-hoa-tang-phuc-tho'],
               ].map(([name, href]) => (
                 <li key={href}>
-                  <Link href={formatLink(href)} className="underline">
+                  <Link href={formatBacklink(href)} className="underline">
                     {name}
                   </Link>
                 </li>

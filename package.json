@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:aws": "cross-env NEXT_PUBLIC_ENV=AWS NEXT_PUBLIC_ASSETS_PATH=https://traihomgovap.com next build",
     "export": "next export",
     "deploy": "node deploy.js",
     "deploy:aws": "aws s3 sync out s3://traihomgovap-host",
@@ -25,6 +26,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cross-env": "^10.1.0",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
     "gh-pages": "^6.3.0",

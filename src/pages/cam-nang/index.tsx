@@ -1,7 +1,6 @@
 import { GetStaticProps, Metadata } from 'next';
 
 import BackToHomeButton from '@/components/BackToHomeButton';
-import SimpleSlider from '@/components/SimpleSlider';
 import articles from '@/data/cam-nang.json';
 import { Article } from '@/types/article';
 import { CardVariant } from '@/types/cardVariant';

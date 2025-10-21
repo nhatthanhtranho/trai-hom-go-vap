@@ -1,12 +1,11 @@
-/** @type {import('next').NextConfig} */
+import { copyFileSync, existsSync } from "fs";
+
 const isAWS = process.env.NEXT_PUBLIC_ENV === "AWS";
-const isProd = process.env.NEXT_PUBLIC_ENV === "PRODUCTION";
-let assetPrefix = ''
-const basePath = ''
-if (isAWS === false && isProd) {
-  assetPrefix = '/trai-hom-go-vap/'
-  // basePath = '/trai-hom-go-vap'
-}
+
+/** @type {import('next').NextConfig} */
+const assetPrefix = '';
+const basePath = '';
+
 const nextConfig = {
   output: "export",
   images: {
@@ -14,6 +13,14 @@ const nextConfig = {
   },
   basePath,
   assetPrefix,
+  async exportPathMap() {
+    // ✅ Copy file CNAME từ root nếu có
+    if (isAWS === false && existsSync("./CNAME")) {
+      copyFileSync("./CNAME", "./out/CNAME");
+      console.log("📄 Đã copy file CNAME vào thư mục out/");
+    }
+    return {};
+  },
 };
 
 export default nextConfig;

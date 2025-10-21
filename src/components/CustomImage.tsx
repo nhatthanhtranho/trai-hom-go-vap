@@ -1,13 +1,9 @@
-'use client';
+"use client";
 
-import Image, { ImageProps } from 'next/image';
-import React from 'react';
-
+import Image, { ImageProps } from "next/image";
+import React from "react";
 
 function formatLinkImage(url: string) {
-  if (process.env.NEXT_PUBLIC_ENV === "PRODUCTION") {
-    return `${process.env.NEXT_PUBLIC_ASSETS_PATH}${url}`;
-  }
   if (url === "/" || url === "") {
     return "/";
   }
@@ -15,12 +11,12 @@ function formatLinkImage(url: string) {
   return `${url}`;
 }
 interface CustomImageProps
-  extends Omit<ImageProps, 'src' | 'alt' | 'fill' | 'width' | 'height'> {
+  extends Omit<ImageProps, "src" | "alt" | "fill" | "width" | "height"> {
   src: string;
   alt?: string;
   description?: string;
   className?: string;
-  objectFit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
+  objectFit?: "contain" | "cover" | "fill" | "none" | "scale-down";
   fill?: boolean;
   width?: number;
   height?: number;
@@ -28,9 +24,9 @@ interface CustomImageProps
 
 const CustomImage: React.FC<CustomImageProps> = ({
   src,
-  alt = '',
-  className = '',
-  objectFit = 'cover',
+  alt = "",
+  className = "",
+  objectFit = "cover",
   fill = false,
   width,
   height,

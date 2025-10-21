@@ -2,10 +2,10 @@
 const isAWS = process.env.NEXT_PUBLIC_ENV === "AWS";
 const isProd = process.env.NEXT_PUBLIC_ENV === "PRODUCTION";
 let assetPrefix = ''
-let basePath = ''
+const basePath = ''
 if (isAWS === false && isProd) {
   assetPrefix = '/trai-hom-go-vap/'
-  basePath = '/trai-hom-go-vap'
+  // basePath = '/trai-hom-go-vap'
 }
 const nextConfig = {
   output: "export",

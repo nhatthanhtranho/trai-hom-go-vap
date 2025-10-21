@@ -131,7 +131,7 @@ const faqSchema = {
 
 export default function Page() {
   return (
-    <CamNangLayout title={title} type="Cẩm nang">
+    <CamNangLayout title={title}>
       <Script
         id="ld-json"
         type="application/ld+json"

@@ -10,7 +10,7 @@
     "build:aws": "cross-env NEXT_PUBLIC_ENV=AWS next build && npm run post-build",
     "export": "next export",
     "deploy:github": "cross-env NEXT_PUBLIC_ENV=PRODUCTION NEXT_PUBLIC_SITE_URL=https://maitanghcm.com npm run build && node deploy.js",
-    "deploy:aws": "npm run build:aws && cross-env NEXT_PUBLIC_ENV=AWS aws s3 sync out s3://traihomgovap-host",
+    "deploy:aws": "npm run build:aws && cross-env NEXT_PUBLIC_SITE_URL=https://traihomgovap.com NEXT_PUBLIC_ENV=AWS aws s3 sync out s3://traihomgovap-host",
     "lint": "eslint",
     "post-build": "next-sitemap --config next-sitemap.config.cjs"
   },

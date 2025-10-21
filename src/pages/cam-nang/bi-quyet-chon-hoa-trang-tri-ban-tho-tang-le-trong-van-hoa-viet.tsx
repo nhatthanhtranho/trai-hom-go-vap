@@ -1,25 +1,22 @@
 // app/cam-nang/[slug]/page.tsx
 
-import Image from '@/components/CustomImage';
-import { GetStaticProps } from 'next';
+import Image from 'next/image';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
+import { GetStaticProps } from 'next';
 
 const slug = 'bi-quyet-chon-hoa-trang-tri-ban-tho-tang-le-trong-van-hoa-viet';
 const title = 'Bí quyết chọn hoa trang trí bàn thờ tang lễ trong văn hóa Việt';
 const description =
   'Hướng dẫn cách chọn hoa trang trí bàn thờ tang lễ chuẩn phong tục Việt: ý nghĩa từng loài hoa, nguyên tắc chọn màu sắc, số lượng và cách phối hợp để không gian tang lễ trang nghiêm, thanh tịnh.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`;
 
 export const metadata = {
   title,
   description,
-  alternates: {
-    canonical: url,
-  },
+  path,
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     images: [
       {

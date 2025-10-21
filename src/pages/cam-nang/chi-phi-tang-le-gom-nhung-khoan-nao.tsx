@@ -1,16 +1,17 @@
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
-import Image from '@/components/CustomImage';
-import type { GetStaticProps, Metadata } from 'next';
+import ResponsiveImage from '@/components/Image/ResponsiveImage';
+import type { GetStaticProps } from 'next';
 
 const slug = 'chi-phi-tang-le-gom-nhung-khoan-nao';
 const title = 'Chi phí tang lễ gồm những khoản nào? Hướng dẫn chi tiết & minh bạch';
 const description =
   'Tìm hiểu chi tiết các khoản chi phí tang lễ: từ quan tài, xe tang, hoa viếng, dịch vụ mai táng – hỏa táng đến lễ cúng. Hướng dẫn lập kế hoạch tài chính tang lễ minh bạch, tiết kiệm và trang trọng.';
+const path = `cam-nang/${slug}`;
 
-export const metadata: Metadata = {
+export const metadata = {
   title,
   description,
-  alternates: { canonical: `https://sinhphuctho.com/cam-nang/${slug}.html` },
+  path,
   openGraph: {
     title,
     description,
@@ -36,8 +37,8 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function Page() {
   return (
     <CamNangLayout title={'Chi phí tang lễ gồm những khoản nào? Hướng dẫn chi tiết & minh bạch'}>
-      <Image
-        src={`/assets/images/cam-nang/${slug}/hinh-1.webp`}
+      <ResponsiveImage
+        imageSource={`/assets/images/cam-nang/${slug}/hinh-1.webp`}
         alt="Chi phí tang lễ gồm những khoản nào"
         className="rounded-xl shadow-sm my-6 h-64"
         priority
@@ -75,8 +76,8 @@ export default function Page() {
         tùy theo lựa chọn dịch vụ và điều kiện kinh tế gia đình.
       </p>
 
-      <Image
-        src={`/assets/images/cam-nang/${slug}/hinh-2.webp`}
+      <ResponsiveImage
+        imageSource={`/assets/images/cam-nang/${slug}/hinh-2.webp`}
         alt="Tổng quan chi phí tang lễ tại Việt Nam"
         className="rounded-xl shadow-sm my-6 h-64"
       />
@@ -96,8 +97,8 @@ export default function Page() {
         khâm liệm (khoảng 1 – 3 triệu đồng) bao gồm vải liệm, gối, chăn, và nhân công thực hiện.
       </p>
 
-      <Image
-        src={`/assets/images/cam-nang/${slug}/hinh-3.webp`}
+      <ResponsiveImage
+        imageSource={`/assets/images/cam-nang/${slug}/hinh-3.webp`}
         alt="Chi phí quan tài và khâm liệm"
         className="rounded-xl shadow-sm my-6 h-64"
       />
@@ -116,8 +117,8 @@ export default function Page() {
         số lượng hoa sử dụng.
       </p>
 
-      <Image
-        src={`/assets/images/cam-nang/${slug}/hinh-4.webp`}
+      <ResponsiveImage
+        imageSource={`/assets/images/cam-nang/${slug}/hinh-4.webp`}
         alt="Trang trí hoa tang lễ trang trọng"
         className="rounded-xl shadow-sm my-6 h-64"
       />
@@ -160,8 +161,8 @@ export default function Page() {
         dao động **3 – 8 triệu đồng**, gói cao cấp có thể tới 15 triệu đồng.
       </p>
 
-      <Image
-        src={`/assets/images/cam-nang/${slug}/hinh-5.webp`}
+      <ResponsiveImage
+        imageSource={`/assets/images/cam-nang/${slug}/hinh-5.webp`}
         alt="Nhân công và phục vụ trong tang lễ"
         className="rounded-xl shadow-sm my-6 h-64"
       />

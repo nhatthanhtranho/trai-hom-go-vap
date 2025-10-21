@@ -1,26 +1,23 @@
 // app/cam-nang/phong-tuc-tet-nguyen-dan/page.tsx
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import Link from 'next/link';
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import { GetStaticProps } from 'next';
 const title = 'Phong Tục Tết Nguyên Đán Của Người Việt – Nét Đẹp Văn Hóa Ngàn Đời';
 const description =
   'Khám phá phong tục Tết Nguyên Đán của người Việt: nguồn gốc, ý nghĩa, các nghi lễ truyền thống như gói bánh chưng, cúng ông Công ông Táo, chúc Tết và giá trị văn hóa tinh thần ngàn đời.';
-const url = 'https://sinhphuctho.com/cam-nang/phong-tuc-tet-nguyen-dan';
+const path = 'cam-nang/phong-tuc-tet-nguyen-dan';
 const image = '/assets/images/cam-nang/phong-tuc-tet-nguyen-dan/hinh-1.jpg';
 // ✅ SEO metadata
 export const metadata = {
   title,
+  path,
   description,
   openGraph: {
     title,
     description,
-    url,
     type: 'article',
     images: [{ url: image }],
-  },
-  alternates: {
-    canonical: url,
   },
 };
 

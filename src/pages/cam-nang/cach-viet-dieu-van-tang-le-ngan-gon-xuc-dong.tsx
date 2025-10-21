@@ -1,6 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 // app/cam-nang/[slug]/page.tsx
 
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
 
@@ -8,18 +9,15 @@ const slug = 'cach-viet-dieu-van-tang-le-ngan-gon-xuc-dong';
 const title = 'Cách viết điếu văn tang lễ ngắn gọn và xúc động';
 const description =
   'Hướng dẫn chi tiết cách viết điếu văn tang lễ ngắn gọn, xúc động và trang nghiêm: cấu trúc, ngôn ngữ, ví dụ mẫu, mẹo viết và FAQs — giúp con cháu, bạn bè gửi lời tiễn biệt trọn vẹn và ý nghĩa.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}.html`;
 
 export const metadata = {
   title,
+  path,
   description,
-  alternates: {
-    canonical: url,
-  },
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     images: [
       {

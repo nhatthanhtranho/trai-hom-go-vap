@@ -1,26 +1,23 @@
 // app/cam-nang/[slug]/page.tsx
 /* eslint-disable react/no-unescaped-entities */
 
+import Image from 'next/image';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
-import Image from '@/components/CustomImage';
 import { GetStaticProps } from 'next/types';
 
 const slug = '6-vitamin-va-khoang-chat-quan-trong-cho-su-phat-trien-cua-tre';
+const path = `cam-nang/${slug}`;
 const title = '6 vitamin và khoáng chất quan trọng cho sự phát triển của trẻ';
 const description =
   'Việc bổ sung vitamin và khoáng chất cho trẻ không còn là điều mới mẻ. Cha mẹ cần hiểu rõ đâu là những dưỡng chất thiết yếu nhất giúp trẻ phát triển toàn diện cả về thể chất và trí tuệ.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
 
 export const metadata = {
   title,
   description,
-  alternates: {
-    canonical: url,
-  },
+  path,
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     images: [
       {

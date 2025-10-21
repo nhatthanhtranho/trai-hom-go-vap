@@ -1,12 +1,13 @@
 import { GetStaticProps, Metadata } from 'next';
 
-import BackToHomeButton from '@/components/BackToHomeButton';
-import articles from '@/data/cam-nang.json';
-import { Article } from '@/types/article';
-import { CardVariant } from '@/types/cardVariant';
-import PostCard from '@/components/PostCard';
-import PostSlider from '@/components/PostSlider/PostSlider';
-import PostCardWithDescription from '@/components/PostCardWithDescription';
+import BackToHomeButton from '@/components/BackToHome/BackToHome';
+import SimpleSlider from '@/components/ImageSlider/ImageSlider';
+import articles from '@/data/articles/cam-nang.json';
+import { Article } from '@/schema/article.schema';
+import { CardVariant } from '@/components/PostCard/type';
+import PostCard from '@/components/PostCard/PostCard';
+import PostSlider from '@/components/ImageSlider/PostSlider';
+import PostCardWithDescription from '@/components/PostCard/PostCardWithDescription';
 
 export const metadata: Metadata = {
   title: 'Cẩm Nang Tang Lễ | Kiến Thức & Hướng Dẫn Khi Nhà Có Đám Tang | Trại Hòm Sinh Phúc Thọ',
@@ -75,7 +76,7 @@ export default function Page() {
     });
   return (
     <>
-      {/* <SimpleSlider /> */}
+      <SimpleSlider />
       <div className="container px-4 py-12 mx-auto">
         <BackToHomeButton />
         <h1 className="text-3xl font-bold text-gray-800 mb-4 text-center md:text-left mt-6">

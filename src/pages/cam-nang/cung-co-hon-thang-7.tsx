@@ -1,24 +1,21 @@
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
-import Image from '@/components/CustomImage';
-import { GetStaticProps, Metadata } from 'next/types';
+import Image from 'next/image';
+import { GetStaticProps } from 'next/types';
 
 const slug = 'cung-co-hon-thang-7';
 const title = 'Cúng Cô Hồn Tháng 7 – Nghi Lễ, Ý Nghĩa và Những Lưu Ý Quan Trọng';
 
 const description =
   'Hướng dẫn chi tiết về lễ cúng Cô Hồn tháng 7: nguồn gốc, ý nghĩa, thời gian, mâm lễ, bài văn khấn và những lưu ý quan trọng để gia đình bạn chuẩn bị đầy đủ, đúng phong tục.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`;
 
-export const metadata: Metadata = {
+export const metadata = {
   title,
   description,
-  alternates: {
-    canonical: url,
-  },
+  path,
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     type: 'article',
     images: [

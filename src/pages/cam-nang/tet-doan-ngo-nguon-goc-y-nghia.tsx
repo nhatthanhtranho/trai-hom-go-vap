@@ -1,6 +1,6 @@
 // app/cam-nang/tet-doan-ngo-y-nghia-phong-tuc-mon-an-truyen-thong/page.tsx
 
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
 
@@ -8,18 +8,15 @@ const slug = 'tet-doan-ngo-nguon-goc-y-nghia';
 const title = 'Tết Đoan Ngọ – Ý nghĩa, phong tục và món ăn truyền thống của người Việt';
 const description =
   'Khám phá Tết Đoan Ngọ mùng 5 tháng 5: nguồn gốc, ý nghĩa, phong tục diệt sâu bọ, cúng lễ và các món ăn truyền thống như rượu nếp, hoa quả, bánh tro. Bài viết chuẩn SEO giúp bạn hiểu rõ ngày Tết đặc sắc trong văn hóa Việt.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`;
 
 export const metadata = {
   title,
   description,
-  alternates: {
-    canonical: url,
-  },
+  path,
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     images: [
       {

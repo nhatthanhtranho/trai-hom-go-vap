@@ -1,5 +1,5 @@
 // app/cam-nang/mam-com-cung-gio/page.tsx
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
 import { GetStaticProps } from 'next';
@@ -8,14 +8,14 @@ const slug = 'mam-com-cung-gio';
 const title = 'Làm Sao Để Chuẩn Bị Mâm Cơm Cúng Giỗ Đúng Phong Tục?';
 const description =
   'Hướng dẫn chi tiết cách chuẩn bị mâm cơm cúng giỗ theo phong tục truyền thống Việt Nam: ý nghĩa, món cần có, cách bày trí, lưu ý phong tục và FAQ. Bài viết chuẩn SEO & EEAT.';
-const canonicalUrl = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`;
+const canonicalUrl = `https://sinhphuctho.com/${path}.html`;
 const IMAGE_PATH = `/assets/images/cam-nang/${slug}`;
-const url = canonicalUrl;
 
 export const metadata = {
   title,
   description,
-  alternates: { canonical: url },
+  path,
   keywords: [
     'mâm cơm cúng giỗ',
     'cách chuẩn bị mâm cúng giỗ',
@@ -29,7 +29,6 @@ export const metadata = {
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     type: 'article',
     locale: 'vi_VN',

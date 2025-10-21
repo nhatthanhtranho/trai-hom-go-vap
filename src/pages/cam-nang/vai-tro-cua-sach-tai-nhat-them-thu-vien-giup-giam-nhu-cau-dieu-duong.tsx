@@ -1,7 +1,7 @@
 // app/cam-nang/[slug]/page.tsx
 /* eslint-disable react/no-unescaped-entities */
 
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
 
@@ -9,18 +9,16 @@ const slug = 'vai-tro-cua-sach-tai-nhat-them-thu-vien-giup-giam-nhu-cau-dieu-duo
 const title = 'Vai trò của sách tại Nhật: Thêm thư viện giúp giảm nhu cầu điều dưỡng';
 const description =
   'Các thư viện công cộng được xem như “liệu pháp xã hội” giúp duy trì sự gắn kết cộng đồng, kích thích hoạt động trí não và giảm cảm giác cô đơn – một trong những nguyên nhân dẫn đến suy giảm sức khỏe ở người già.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}`;
+const path = `cam-nang/${slug}`;
 
 export const metadata = {
+  path,
   title,
   description,
-  alternates: {
-    canonical: url,
-  },
+
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     images: [
       {

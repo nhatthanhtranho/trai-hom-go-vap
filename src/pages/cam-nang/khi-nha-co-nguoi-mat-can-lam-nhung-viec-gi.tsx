@@ -1,20 +1,23 @@
 // app/cam-nang/quy-trinh-to-chuc-tang-le-tron-goi/page.tsx
 import React from 'react';
 import Link from 'next/link';
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
-import type { GetStaticProps, Metadata } from 'next';
+import type { GetStaticProps } from 'next';
+import { SITE_URL } from '@/constants/constant';
 
 const slug = 'khi-nha-co-nguoi-mat-can-lam-nhung-viec-gi';
 const title =
   'Khi nhà có người mất cần làm những việc gì?';
 const description =
   'Hướng dẫn chi tiết các bước tổ chức tang lễ trọn gói từ khâm liệm, nhập quan, lễ viếng, truy điệu đến an táng hoặc hỏa táng. Giúp gia đình chuẩn bị chu toàn, trang nghiêm và ý nghĩa cho người đã khuất.';
-const canonicalUrl = `https://sinhphuctho.com/cam-nang/${slug},html`;
+const path = `cam-nang/${slug}`;
 const IMAGE_PATH = `/assets/images/cam-nang/${slug}`;
+const url = `${SITE_URL}/${path}.html`
 
-export const metadata: Metadata = {
+export const metadata = {
+  path,
   title: 'Khi Nhà Có Người Mất Cần Làm Những Việc Gì? | Hướng Dẫn Chuẩn Bị Tang Lễ Trọn Gói',
   description:
     'Khi có người thân qua đời, gia đình cần chuẩn bị những gì? Hướng dẫn chi tiết quy trình tổ chức tang lễ trọn gói – từ khâm liệm, nhập quan, lễ viếng, truy điệu đến an táng hoặc hỏa táng, giúp bạn chu toàn trong giây phút thiêng liêng nhất.',
@@ -28,14 +31,10 @@ export const metadata: Metadata = {
     'an táng hỏa táng',
     'tang lễ trọn gói sinh phúc thọ'
   ],
-  alternates: {
-    canonical: 'https://sinhphuctho.com/cam-nang/khi-nha-co-nguoi-mat-can-lam-nhung-viec-gi.html'
-  },
   openGraph: {
     title: 'Khi Nhà Có Người Mất Cần Làm Những Việc Gì? | Quy Trình Tang Lễ Trọn Gói 2025',
     description:
       'Bài viết hướng dẫn chi tiết quy trình tổ chức tang lễ trọn gói, từ khâm liệm, nhập quan đến lễ viếng, truy điệu và an táng. Giúp gia đình chuẩn bị chu toàn, trang nghiêm và ý nghĩa cho người đã khuất.',
-    url: 'https://sinhphuctho.com/cam-nang/khi-nha-co-nguoi-mat-can-lam-nhung-viec-gi.html',
     type: 'article',
     images: [
       {
@@ -229,7 +228,7 @@ export default function Page() {
             },
             mainEntityOfPage: {
               '@type': 'WebPage',
-              '@id': canonicalUrl
+              '@id': url
             },
             datePublished: '2025-10-07T00:00:00+07:00',
             dateModified: '2025-10-07T00:00:00+07:00',

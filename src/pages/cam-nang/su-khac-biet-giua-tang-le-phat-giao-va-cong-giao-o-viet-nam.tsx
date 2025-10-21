@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 // app/cam-nang/[slug]/page.tsx
 
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
 
@@ -9,16 +9,15 @@ const slug = 'su-khac-biet-giua-tang-le-phat-giao-va-cong-giao-o-viet-nam';
 const title = 'Sự khác biệt giữa tang lễ Phật giáo và Công giáo ở Việt Nam';
 const description =
   'So sánh chi tiết tang lễ Phật giáo và Công giáo tại Việt Nam: nghi thức, trang phục, bài kinh, lễ an táng/hỏa táng, biểu tượng, vai trò người chủ lễ và những lưu ý phong tục. Hướng dẫn dành cho gia đình cần tổ chức tang lễ đúng nghi thức, trang nghiêm và tôn trọng tín ngưỡng.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`;
 
 export const metadata = {
   title,
   description,
-  alternates: { canonical: url },
+  path,
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     images: [
       { url: `/assets/images/cam-nang/${slug}/hinh-1.jpg`, width: 1200, height: 630, alt: title },

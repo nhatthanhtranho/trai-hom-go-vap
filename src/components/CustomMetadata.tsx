@@ -1,17 +1,22 @@
-import { SEOMetadata } from '@/types/seoMetadata'
+import { SEOMetadata } from '@/schema/seoMetadata.schema';
 import Head from 'next/head';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
 export default function CustomMetadata({
   title = 'Sinh Phúc Thọ | Dịch Vụ Tang Lễ Trọn Gói Uy Tín Tại TP.HCM',
   description = 'Trại Hòm Sinh Phúc Thọ cung cấp dịch vụ tang lễ, hỏa táng, an táng trọn gói chuyên nghiệp. Hỗ trợ 24/7, phục vụ tận tâm, uy tín tại TP.HCM và các tỉnh lân cận.',
   keywords = 'dịch vụ tang lễ, trại hòm, hỏa táng, an táng, nhà tang lễ, Sinh Phúc Thọ, tang lễ Phật giáo',
-  alternates = { canonical: 'https://sinhphuctho.com' },
+  path,
   image = 'https://sinhphuctho.com/ve-chung-toi.jpg',
   type = 'website',
   publishedTime,
   modifiedTime,
 }: SEOMetadata) {
-  const url = alternates.canonical || 'https://sinhphuctho.com';
+  let url = SITE_URL
+  if (path) {
+    url = `${SITE_URL}/${path}.html`
+  }
 
   const localBusinessJsonLd = {
     '@context': 'https://schema.org',

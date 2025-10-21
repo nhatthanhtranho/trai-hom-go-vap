@@ -1,27 +1,24 @@
 // app/cam-nang/lua-chon-dich-vu-hoa-tang-an-tam-tren-hanh-trinh-cuoi/page.tsx
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import Link from 'next/link';
-import FaqSection from '@/components/FAQs';
-import type { GetStaticProps, Metadata } from 'next';
+import FaqSection from '@/components/FAQs/FAQs';
+import type { GetStaticProps } from 'next';
 
 const slug = 'lua-chon-dich-vu-hoa-tang-an-tam-tren-hanh-trinh-cuoi';
 const title = 'Lựa chọn dịch vụ hỏa táng an tâm trên hành trình cuối';
 const description =
   'Bài viết hướng dẫn cách chọn dịch vụ hỏa táng trọn gói uy tín, công nghệ tiên tiến và minh bạch tại Sinh Phúc Thọ – giúp gia đình an tâm trong hành trình tiễn biệt người thân.';
 const image = `https://sinhphuctho.com/assets/images/cam-nang/${slug}/hinh-1.webp`;
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}.html`;
 
-export const metadata: Metadata = {
+export const metadata = {
   title,
   description,
-  alternates: {
-    canonical: url,
-  },
+  path,
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     locale: 'vi_VN',
     type: 'article',

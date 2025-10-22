@@ -15,7 +15,7 @@ const CONTACTS = [
   { href: 'https://zalo.me/0913673661', icon: '/assets/images/zalo.webp', name: 'Zalo' },
   { href: 'tel:0913673661', icon: '/assets/images/phone.webp', name: 'Điện Thoại' },
   {
-    href: 'https://www.facebook.com/profile.php?id=61579044366898',
+    href: 'https://www.facebook.com/traihomsinhphuctho/',
     icon: '/assets/images/facebook.webp',
     name: 'Facebook',
   },

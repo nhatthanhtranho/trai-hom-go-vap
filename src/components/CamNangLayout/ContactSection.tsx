@@ -31,7 +31,7 @@ const ContactSetion = () => {
               <Image src="/assets/images/zalo.webp" width={iconSize} height={iconSize} alt="Zalo" />
             </a>
             <a
-              href="https://www.facebook.com/profile.php?id=61579044366898"
+              href="https://www.facebook.com/traihomsinhphuctho/"
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer"

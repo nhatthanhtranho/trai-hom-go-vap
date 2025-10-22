@@ -42,7 +42,7 @@ export default function CustomMetadata({
       height: 375,
     },
     sameAs: [
-      'https://www.facebook.com/profile.php?id=61579044366898',
+      'https://www.facebook.com/traihomsinhphuctho/',
       'https://www.youtube.com/@sinhphuctho/shorts',
       'https://maps.app.goo.gl/itWuMg9QSfoCDVez9',
     ],

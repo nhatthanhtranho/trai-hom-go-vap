@@ -1,18 +1,19 @@
 // app/cam-nang/[slug]/page.tsx
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 
 const slug = 'phong-tuc-cai-tang-cua-nguoi-viet-va-nhung-viec-can-biet';
 const title = 'Phong tục cải táng của người Việt và những việc cần biết';
 const description =
   'Tìm hiểu phong tục cải táng của người Việt từ thời sơ khai đến phong kiến, ý nghĩa văn hóa tâm linh và những điều cần lưu ý khi thực hiện cải táng.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`;
 const image = `/assets/images/cam-nang/${slug}/hinh-1.webp`;
 
 export const metadata = {
   title,
   description,
+  path,
   keywords: [
     'phong tục cải táng',
     'cải táng người Việt',
@@ -24,7 +25,6 @@ export const metadata = {
   openGraph: {
     title,
     description,
-    url,
     type: 'article',
     siteName: 'Sinh Phúc Thọ',
     images: [
@@ -35,9 +35,6 @@ export const metadata = {
         alt: title,
       },
     ],
-  },
-  alternates: {
-    canonical: url,
   },
 };
 

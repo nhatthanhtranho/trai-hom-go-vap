@@ -1,22 +1,19 @@
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
-import type { GetStaticProps, Metadata } from 'next';
+import type { GetStaticProps } from 'next';
 import FigureImage from '@/components/ImageFigure';
 const slug = 'chua-vinh-nghiem';
 const title = 'Chùa Vĩnh Nghiêm – Ngôi Chùa Linh Thiêng Giữa Lòng Sài Gòn';
 const description =
     'Khám phá chùa Vĩnh Nghiêm – ngôi chùa linh thiêng giữa lòng Sài Gòn với kiến trúc uy nghi, lịch sử hơn nửa thế kỷ và giá trị văn hóa tâm linh đặc sắc.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`;
 
-export const metadata: Metadata = {
+export const metadata = {
     title,
     description,
-    alternates: {
-        canonical: url,
-    },
+    path,
     openGraph: {
         title,
         description,
-        url,
         siteName: 'Sinh Phúc Thọ',
         type: 'article',
         images: [

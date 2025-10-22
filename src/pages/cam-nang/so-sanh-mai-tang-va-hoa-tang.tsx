@@ -1,7 +1,7 @@
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import Script from 'next/script';
-import type { GetStaticProps, Metadata } from 'next';
+import type { GetStaticProps } from 'next';
 
 const slug = 'so-sanh-mai-tang-va-hoa-tang';
 const basePath = `/assets/images/cam-nang/${slug}`;
@@ -37,19 +37,19 @@ const title = 'So sánh mai táng và hỏa táng — Nên chọn hình thức n
 const description =
   'So sánh chi tiết mai táng và hỏa táng: quy trình, chi phí, phong tục, tác động môi trường và hướng dẫn chọn hình thức phù hợp. Bài viết giúp gia đình hiểu rõ giá trị văn hóa – tâm linh để lựa chọn nhân văn và tiết kiệm.';
 const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`;
 const publishedDate = '2025-10-14';
 const modifiedDate = '2025-10-14';
 
-export const metadata: Metadata = {
+export const metadata = {
   title,
+  path,
   description,
-  alternates: { canonical: url },
   keywords:
     'mai táng, hỏa táng, so sánh mai táng và hỏa táng, nên chọn hỏa táng hay mai táng, chi phí tang lễ, phong tục mai táng, xử lý tro cốt, lựa chọn hình thức tang lễ, sinh phúc thọ, dịch vụ tang lễ trọn gói, tư vấn tang lễ',
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     type: 'article',
     images: [{ url: images[0].src, width: 1200, height: 630, alt: images[0].alt }],
@@ -131,7 +131,7 @@ const faqSchema = {
 
 export default function Page() {
   return (
-    <CamNangLayout title={title} tag="Cẩm nang">
+    <CamNangLayout title={title}>
       <Script
         id="ld-json"
         type="application/ld+json"

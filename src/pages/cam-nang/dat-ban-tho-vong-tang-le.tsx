@@ -1,4 +1,4 @@
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
 import { GetStaticProps } from 'next';
@@ -7,16 +7,15 @@ const slug = 'dat-ban-tho-vong-tang-le';
 const title = 'Phong Tục Đặt Bàn Thờ Vong Trong Tang Lễ – Điều Nên và Không Nên';
 const description =
   'Tìm hiểu phong tục đặt bàn thờ vong trong tang lễ: ý nghĩa, cách thực hiện, điều nên và không nên theo quan niệm dân gian và Phật giáo. Bài viết chuẩn SEO chi tiết, đầy đủ thông tin, giúp gia đình tổ chức tang lễ trang nghiêm và đúng phong tục.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`;
 
 export const metadata = {
+  path,
   title,
   description,
-  alternates: { canonical: url },
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     images: [
       {

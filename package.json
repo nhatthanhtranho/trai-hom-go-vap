@@ -6,12 +6,13 @@
   "homepage": "https://nhatthanhtranho.github.io/trai-hom-go-vap/",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
-    "build:aws": "cross-env NEXT_PUBLIC_ENV=AWS NEXT_PUBLIC_ASSETS_PATH=https://traihomgovap.com next build",
+    "build": "next build && npm run post-build",
+    "build:aws": "cross-env NEXT_PUBLIC_ENV=AWS next build && npm run post-build",
     "export": "next export",
-    "deploy:github": "cross-env NEXT_PUBLIC_ENV=PRODUCTION npm run build && node deploy.js",
-    "deploy:aws": "npm run build:aws && cross-env NEXT_PUBLIC_ENV=AWS aws s3 sync out s3://traihomgovap-host",
-    "lint": "eslint"
+    "deploy:github": "cross-env NEXT_PUBLIC_ENV=PRODUCTION NEXT_PUBLIC_SITE_URL=https://maitanghcm.com npm run build && node deploy.js",
+    "deploy:aws": "npm run build:aws && cross-env NEXT_PUBLIC_SITE_URL=https://traihomgovap.com NEXT_PUBLIC_ENV=AWS aws s3 sync out s3://traihomgovap-host",
+    "lint": "eslint",
+    "post-build": "next-sitemap --config next-sitemap.config.cjs"
   },
   "dependencies": {
     "critters": "^0.0.23",
@@ -32,6 +33,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
     "gh-pages": "^6.3.0",
+    "next-sitemap": "^4.2.3",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.14",
     "typescript": "^5"

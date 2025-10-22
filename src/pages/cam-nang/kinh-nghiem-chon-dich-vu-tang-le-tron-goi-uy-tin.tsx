@@ -1,7 +1,7 @@
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
 import type { GetStaticProps, Metadata } from 'next';
-import Image from '@/components/CustomImage'
+import ResponsiveImage from '@/components/Image/ResponsiveImage';
 
 const slug = 'kinh-nghiem-chon-dich-vu-tang-le-tron-goi-uy-tin';
 const basePath = `/assets/images/cam-nang/${slug}`;
@@ -15,19 +15,19 @@ const title = 'Kinh nghiệm chọn dịch vụ tang lễ trọn gói uy tín �
 const description =
   'Hướng dẫn đầy đủ, thực tế để chọn dịch vụ tang lễ trọn gói uy tín: so sánh hỏa táng và an táng, checklist hỏi nhà cung cấp, hợp đồng, chi phí, thủ tục, phong tục, an toàn và bảo vệ môi trường.';
 const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`
 const publishedDate = '2025-10-13';
 const modifiedDate = '2025-10-13';
 
-export const metadata: Metadata = {
+export const metadata = {
   title,
+  path,
   description,
-  alternates: { canonical: url },
   keywords:
     'dịch vụ tang lễ, tang lễ trọn gói, chọn dịch vụ tang lễ, hỏa táng, an táng, chi phí tang lễ, checklist tang lễ, Sinh Phúc Thọ',
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     type: 'article',
     images: [
@@ -126,7 +126,7 @@ const faqSchema = {
 
 export default function Page() {
   return (
-    <CamNangLayout title={title} tag="Cẩm nang">
+    <CamNangLayout title={title}>
       {/* JSON-LD */}
       <Script
         id="ld-json"
@@ -243,8 +243,8 @@ export default function Page() {
             lễ là lĩnh vực nhạy cảm, đòi hỏi trách nhiệm cao và minh bạch.
           </p>
 
-          <Image
-            src={image1}
+          <ResponsiveImage
+            imageSource={image1}
             alt="Nhân sự tổ chức tang lễ chuyên nghiệp"
             className="my-6 rounded overflow-hidden h-64"
           />
@@ -274,8 +274,8 @@ export default function Page() {
             tại nhà thờ/địa điểm tâm linh.
           </p>
 
-          <Image
-            src={image2}
+          <ResponsiveImage
+            imageSource={image2}
             alt="So sánh hỏa táng và an táng"
             className="my-6 rounded overflow-hidden h-64"
           />
@@ -332,8 +332,8 @@ export default function Page() {
             cố (hư hỏng tài sản, sai sót trong thủ tục), và có quy định bồi hoàn rõ ràng.
           </p>
 
-          <Image
-            src={image3}
+          <ResponsiveImage
+            imageSource={image3}
             alt="Kiểm tra giấy phép và hợp đồng dịch vụ tang lễ"
             className="my-6 rounded overflow-hidden h-64"
           />
@@ -432,8 +432,8 @@ export default function Page() {
             <li>Bảo đảm có người giám sát nến, thiết bị điện để tránh cháy nổ.</li>
           </ul>
 
-          <Image
-            src={image4}
+          <ResponsiveImage
+            imageSource={image4}
             alt="Checklist chuẩn bị tang lễ trước giờ diễn ra"
             className="my-6 rounded overflow-hidden h-64"
           />
@@ -501,8 +501,8 @@ export default function Page() {
             <li>Ghi lại mọi trao đổi (tin nhắn/email) để làm bằng chứng khi cần.</li>
           </ul>
 
-          <Image
-            src={image5}
+          <ResponsiveImage
+            imageSource={image5}
             alt="Gia đình tham khảo dịch vụ tang lễ"
             className="my-6 rounded overflow-hidden h-64"
           />

@@ -1,6 +1,6 @@
 // app/cam-nang/phong-tuc-mo-cua-ma/page.tsx
 
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
 import { GetStaticProps } from 'next';
@@ -10,16 +10,15 @@ const IMAGE_PATH = '/assets/images/cam-nang/' + slug;
 const title = 'Phong Tục Mở Cửa Mả – Nghi Lễ và Ý Nghĩa Trong Văn Hóa Việt';
 const description =
   'Tìm hiểu phong tục mở cửa mả trong văn hóa Việt: nguồn gốc, ý nghĩa, cách cúng mở cửa mả, thời điểm phù hợp, các lưu ý và giá trị tâm linh sâu sắc. Bài viết chuẩn SEO, đầy đủ và chi tiết.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`;
 
 export const metadata = {
   title,
   description,
-  alternates: { canonical: url },
+  path,
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     images: [
       {

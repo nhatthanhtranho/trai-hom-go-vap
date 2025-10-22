@@ -1,23 +1,20 @@
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
-import Image from '@/components/CustomImage';
-import type { GetStaticProps, Metadata } from 'next';
+import Image from 'next/image';
+import type { GetStaticProps } from 'next';
 
 const slug = 'tet-trung-thu-nguon-goc-y-nghia';
 const title = 'Tết Trung Thu – Nguồn Gốc, Ý Nghĩa và Những Hoạt Động Truyền Thống';
 const description =
   'Khám phá Tết Trung Thu: nguồn gốc, ý nghĩa, phong tục truyền thống như rước đèn, múa lân, làm bánh, phá cỗ và những hoạt động hiện đại gắn kết gia đình Việt.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`;
 
-export const metadata: Metadata = {
+export const metadata = {
   title,
   description,
-  alternates: {
-    canonical: url,
-  },
+  path,
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     type: 'article',
     images: [

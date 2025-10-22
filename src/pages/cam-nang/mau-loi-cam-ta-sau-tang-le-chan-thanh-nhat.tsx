@@ -1,19 +1,22 @@
 // app/cam-nang/mau-loi-cam-on-sau-tang-le/page.tsx
 
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import Script from 'next/script';
-import type { GetStaticProps, Metadata } from 'next';
+import type { GetStaticProps } from 'next';
+import { SITE_URL } from '@/constants/constant';
 
 const slug = 'mau-loi-cam-ta-sau-tang-le-chan-thanh-nhat';
 const title = 'Mẫu Lời Cảm Ơn Sau Tang Lễ Chân Thành Nhất';
 const description =
   'Tham khảo những mẫu lời cảm ơn sau tang lễ chân thành và ý nghĩa nhất. Hướng dẫn cách viết, thời điểm, mẫu đăng Facebook/Zalo, và mẹo để lời cảm ơn vừa trang trọng vừa phù hợp phong tục Việt.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}`;
+const path = `cam-nang/${slug}`;
+const url = `${SITE_URL}/${path}.html`
 
-export const metadata: Metadata = {
+export const metadata = {
   title,
   description,
+  path,
   keywords: [
     'mẫu lời cảm ơn sau tang lễ',
     'lời cảm tạ sau đám tang',
@@ -25,7 +28,6 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    url,
     type: 'article',
     siteName: 'Sinh Phúc Thọ',
     images: [
@@ -42,9 +44,6 @@ export const metadata: Metadata = {
     title,
     description,
     images: [`/assets/images/cam-nang/${slug}/hinh-1.webp`],
-  },
-  alternates: {
-    canonical: url,
   },
 };
 

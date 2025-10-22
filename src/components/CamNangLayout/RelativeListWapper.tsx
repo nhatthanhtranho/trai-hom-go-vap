@@ -9,7 +9,7 @@ export const getArticles = async (tag?: string): Promise<Article[]> => {
 
     switch (tag) {
         default: {
-            const camNang = (await import('@/data/cam-nang.json')).default;
+            const camNang = (await import('@/data/articles/cam-nang.json')).default;
             articles = [...camNang];
         }
     }

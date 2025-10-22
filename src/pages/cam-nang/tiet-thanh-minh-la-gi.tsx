@@ -1,24 +1,22 @@
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
-import { GetStaticProps, Metadata } from 'next';
-import Image from '@/components/CustomImage';
+import { GetStaticProps } from 'next';
+import Image from 'next/image';
 
 const slug = 'tiet-thanh-minh-la-gi';
 const title = 'Tiết Thanh Minh – Ý Nghĩa, Phong Tục Tạo Mộ Của Người Việt';
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`;
 const description = `Tiết Thanh Minh là một trong những dịp lễ quan trọng trong văn hóa Á Đông,
 thường rơi vào đầu tháng 4 dương lịch. Đây là thời điểm con cháu tưởng nhớ tổ tiên, dọn dẹp
 phần mộ và bày tỏ lòng hiếu kính.`
 
-export const metadata: Metadata = {
+export const metadata = {
   title,
   description,
-  alternates: {
-    canonical: url,
-  },
+  path,
+
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     type: 'article',
   },

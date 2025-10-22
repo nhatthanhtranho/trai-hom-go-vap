@@ -1,7 +1,7 @@
 // app/cam-nang/[slug]/page.tsx
 /* eslint-disable react/no-unescaped-entities */
 
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
 
@@ -9,18 +9,15 @@ const slug = 'nhung-thuc-pham-la-kho-canxi-quen-thuoc-trong-cho-viet';
 const title = 'Những thực phẩm là "kho canxi" quen thuộc trong chợ Việt';
 const description =
   'Canxi là khoáng chất thiết yếu, không chỉ giúp xương và răng chắc khỏe mà còn tham gia vào nhiều chức năng quan trọng của cơ thể như co cơ, dẫn truyền thần kinh và điều hòa nhịp tim. Việc bổ sung đủ canxi mỗi ngày là nền tảng để duy trì sức khỏe hệ xương, phòng ngừa loãng xương và hỗ trợ hoạt động ổn định của toàn cơ thể.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`;
 
 export const metadata = {
   title,
   description,
-  alternates: {
-    canonical: url,
-  },
+  path,
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     images: [
       {

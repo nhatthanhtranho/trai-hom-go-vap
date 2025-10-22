@@ -1,15 +1,13 @@
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import Link from 'next/link';
-import type { GetStaticProps, Metadata } from 'next';
+import type { GetStaticProps } from 'next';
 
 const slug = 'le-vu-lan-va-y-nghia-bong-hong-cai-ao';
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
-export const metadata: Metadata = {
-  alternates: {
-    canonical: url,
-  },
+const path = `cam-nang/${slug}`;
+export const metadata = {
   title: 'Lễ Vu Lan và ý nghĩa Bông hồng cài áo – Văn hóa báo hiếu Việt Nam',
+  path,
   description:
     'Khám phá nguồn gốc, ý nghĩa và phong tục lễ Vu Lan cùng nghi thức Bông hồng cài áo trong văn hóa Việt Nam. Ngày Vu Lan báo hiếu là dịp tri ân cha mẹ, tổ tiên và lan tỏa lòng hiếu nghĩa.',
   keywords: [
@@ -26,7 +24,6 @@ export const metadata: Metadata = {
     title: 'Lễ Vu Lan và ý nghĩa Bông hồng cài áo – Văn hóa báo hiếu Việt Nam',
     description:
       'Tìm hiểu lễ Vu Lan và nghi thức Bông hồng cài áo – phong tục giàu ý nghĩa trong văn hóa Việt Nam, gắn liền với tinh thần hiếu thảo và lòng biết ơn cha mẹ, tổ tiên.',
-    url: `https://sinhphuctho.com/cam-nang/${slug}.html`,
     type: 'article',
     images: [
       {

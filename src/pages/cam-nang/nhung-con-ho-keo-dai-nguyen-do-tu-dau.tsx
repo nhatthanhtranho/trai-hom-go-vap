@@ -1,6 +1,6 @@
 // app/cam-nang/[slug]/page.tsx
 
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
 
@@ -8,18 +8,15 @@ const slug = 'nhung-con-ho-keo-dai-nguyen-do-tu-dau';
 const title = 'Những cơn ho kéo dài: Nguyên do từ đâu?';
 const description =
   'Ho là một trong những phản xạ tự nhiên có thể xuất hiện đột ngột hoặc kéo dài. Trong đó, ho không ngừng và mạn tính là dấu hiệu của nhiều vấn đề sức khỏe đáng chú ý.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}`;
+const path = `cam-nang/${slug}`;
 
 export const metadata = {
   title,
   description,
-  alternates: {
-    canonical: url,
-  },
+  path,
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     images: [
       {

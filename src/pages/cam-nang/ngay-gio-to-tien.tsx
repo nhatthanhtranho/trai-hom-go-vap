@@ -1,7 +1,7 @@
 // app/cam-nang/ngay-gio-to-tien/page.tsx
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import { GetStaticProps } from 'next';
 
 const slug = 'ngay-gio-to-tien';
@@ -9,16 +9,15 @@ const title = 'Ngày Giỗ Tổ Tiên – Nghi Lễ, Ý Nghĩa Và Cách Chuẩn
 const IMAGE_PATH = `/assets/images/cam-nang/${slug}`;
 const description =
   'Tìm hiểu ý nghĩa ngày giỗ tổ tiên trong văn hóa Việt Nam: nguồn gốc, nghi lễ cúng giỗ, cách chuẩn bị mâm cúng và giá trị đạo hiếu trong đời sống hiện đại. Bài viết chuẩn SEO, sâu sắc và đầy đủ thông tin.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`;
 
 export const metadata = {
   title,
+  path,
   description,
-  alternates: { canonical: url },
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     type: 'article',
     locale: 'vi_VN',

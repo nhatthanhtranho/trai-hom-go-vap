@@ -1,24 +1,21 @@
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 
 const title = 'Nguồn gốc và ý nghĩa ngày Rằm tháng Giêng (Tết Nguyên Tiêu)';
 const description =
   'Khám phá Rằm tháng Giêng – Tết Nguyên Tiêu: nguồn gốc, ý nghĩa, nghi lễ cúng dâng sao giải hạn, cùng những điều nên làm để khởi đầu năm mới an lành, may mắn.';
-const url = 'https://sinhphuctho.com/cam-nang/ram-thang-gieng-tet-nguyen-tieu.html';
+const path = 'cam-nang/ram-thang-gieng-tet-nguyen-tieu';
 const image = '/assets/images/cam-nang/ram-thang-gieng-tet-nguyen-tieu/hinh-1.webp';
 export const metadata = {
   title,
+  path,
   description,
   openGraph: {
     title,
     description,
-    url,
     type: 'article',
     images: [{ url: image }],
-  },
-  alternates: {
-    canonical: url,
   },
 };
 

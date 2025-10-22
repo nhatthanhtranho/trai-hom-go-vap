@@ -1,7 +1,7 @@
 // app/cam-nang/y-nghia-chiec-khan-tang/page.tsx
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import Script from 'next/script';
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import { GetStaticProps } from 'next';
 
 const slug = 'y-nghia-chiec-khan-tang';
@@ -9,16 +9,15 @@ const title = 'Ý Nghĩa Chiếc Khăn Tang Trong Phong Tục Tang Lễ Việt N
 const IMAGE_PATH = `/assets/images/cam-nang/${slug}`;
 const description =
   'Tìm hiểu ý nghĩa chiếc khăn tang trong phong tục tang lễ Việt Nam: nguồn gốc, biểu tượng, cách đeo và vai trò trong văn hóa tâm linh. Bài viết chuẩn SEO, sâu sắc và đầy đủ thông tin.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}`;
+const path = `cam-nang/${slug}`;
 
 export const metadata = {
   title,
   description,
-  alternates: { canonical: url },
+  path,
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     type: 'article',
     locale: 'vi_VN',

@@ -1,7 +1,7 @@
 // app/cam-nang/[slug]/page.tsx
 /* eslint-disable react/no-unescaped-entities */
 
-import Image from '@/components/CustomImage';
+import Image from 'next/image';
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
 import { GetStaticProps } from 'next';
 
@@ -9,17 +9,16 @@ const slug = 'loi-ich-nhan-tien-cua-viec-an-chay';
 const title = 'Lợi ích nhãn tiền của việc ăn chay';
 const description =
   'Với các bệnh nhân mắc cao huyết áp, đái tháo đường, mỡ máu cao, việc ăn chay hoàn toàn giúp cải thiện các chỉ số trong công thức máu, cơ thể khỏe mạnh hơn và đẩy lùi bệnh tật.';
-const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`;
+
 export const metadata = {
   title,
   description,
-  alternates: {
-    canonical: url,
-  },
+  path,
+
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     images: [
       {

@@ -1,24 +1,23 @@
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
-import Image from '@/components/CustomImage';
-import type { GetStaticProps, Metadata } from 'next';
-import PostHeadline from '@/components/PostHeadline';
+import Image from 'next/image';
+import type { GetStaticProps } from 'next';
+import PostHeadline from '@/components/Post/PostHeadline';
 
 const slug = 'cung-com-cho-nguoi-moi-mat';
 const title = 'Cúng cơm cho người mới mất – Ý nghĩa, cách chuẩn bị và văn khấn chuẩn';
 const description =
   'Hướng dẫn chi tiết về tục cúng cơm cho người mới mất: ý nghĩa phong tục, cách chuẩn bị mâm cơm, bài văn khấn chuẩn và những lưu ý quan trọng trong 100 ngày đầu.';
 const url = `https://sinhphuctho.com/cam-nang/${slug}.html`;
+const path = `cam-nang/${slug}`;
 
-export const metadata: Metadata = {
+
+export const metadata = {
   title,
   description,
-  alternates: {
-    canonical: url,
-  },
+  path,
   openGraph: {
     title,
     description,
-    url,
     siteName: 'Sinh Phúc Thọ',
     type: 'article',
     images: [

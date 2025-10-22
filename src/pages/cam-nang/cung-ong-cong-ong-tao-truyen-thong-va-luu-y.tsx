@@ -1,22 +1,22 @@
 // app/cam-nang/cung-ong-cong-ong-tao-truyen-thong-va-luu-y/page.tsx
 import CamNangLayout from '@/components/CamNangLayout/CamNangLayout';
-import Image from '@/components/CustomImage';
-import FaqSection from '@/components/FAQs';
+import Image from 'next/image';
+import FaqSection from '@/components/FAQs/FAQs';
 import { GetStaticProps } from 'next';
 
 const title = 'Cúng Ông Công Ông Táo – Truyền Thống và Lưu Ý Quan Trọng';
 const description =
   'Tìm hiểu ý nghĩa ngày cúng Ông Công Ông Táo 23 tháng Chạp, hướng dẫn chuẩn bị lễ vật, bài khấn và những lưu ý quan trọng để tiễn Táo Quân về trời trọn vẹn, may mắn.';
-const url = 'https://sinhphuctho.com/cam-nang/cung-ong-cong-ong-tao-truyen-thong-va-luu-y.html';
+const path = 'cam-nang/cung-ong-cong-ong-tao-truyen-thong-va-luu-y';
 const image = '/assets/images/cam-nang/cung-ong-cong-ong-tao-truyen-thong-va-luu-y/banner.webp';
 
 export const metadata = {
   title,
   description,
+  path,
   openGraph: {
     title,
     description,
-    url,
     type: 'article',
     siteName: 'Sinh Phúc Thọ',
     locale: 'vi_VN',
@@ -27,9 +27,6 @@ export const metadata = {
     title,
     description,
     images: [image],
-  },
-  alternates: {
-    canonical: url,
   },
 };
 
